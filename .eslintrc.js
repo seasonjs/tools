@@ -19,7 +19,7 @@ module.exports = {
     rules: {
         'indent': ['error', 4],
         'no-unused-vars': 'error',
-        'no-restricted-globals': ['error', ...DOMGlobals, ...NodeGlobals],
+        'no-restricted-globals': ['off', ...DOMGlobals, ...NodeGlobals],
         'no-console': 'off',
     }
 };

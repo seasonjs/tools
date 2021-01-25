@@ -1,3 +1,4 @@
 import mixin from "./mixin";
 import deepClone from "./deepClone";
-export { mixin, deepClone, };
+import ua from './ua';
+export { mixin, deepClone, ua };
