@@ -1,8 +1,26 @@
 {
   "name": "season-tools",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
   "repository": "https://github.com/seasonjs/tools.git",
   "author": "Cyberhan123",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "set NODE_ENV=developemnt&& rollup -c rollup.config.js -w",
+    "build": "set NODE_ENV=production&& rollup -c rollup.config.js"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-eslint": "^8.0.1",
+    "@rollup/plugin-node-resolve": "^11.1.0",
+    "@rollup/plugin-typescript": "^8.1.0",
+    "@typescript-eslint/parser": "^4.14.0",
+    "eslint": "^7.18.0",
+    "rollup-plugin-typescript2": "^0.29.0"
+  },
+  "dependencies": {
+    "rollup": "^2.38.0",
+    "typescript": "^4.1.3"
+  }
 }
