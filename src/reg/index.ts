@@ -8,3 +8,4 @@ const reg = {
     phoneNumber,
     qq
 }
+export default reg;
