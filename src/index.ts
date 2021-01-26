@@ -3,7 +3,8 @@ import mixin from "./mixin";
 import deepClone from "./deepClone";
 import ua from './ua';
 import reg from './reg';
-import type from './type'
+import typeCheck from './type';
+import querystring from 'querystring'
 
 // const _: any = {
 //     mixin,
@@ -19,5 +20,7 @@ export {
     deepClone,
     ua,
     reg,
-    type
+    querystring,
+    typeCheck
 };
+

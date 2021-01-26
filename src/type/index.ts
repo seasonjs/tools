@@ -37,11 +37,11 @@ function isFunction(value: any) {
     return typeof value === 'function'
 }
 
-const type = {
+const typeCheck = {
     isNil,
     isNull,
     isObject,
     isFunction,
     getType,
 }
-export default type;
+export default typeCheck;

@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.20",
+    "querystring": "^0.2.0",
     "rollup": "^2.38.0",
     "typescript": "^4.1.3"
   }
