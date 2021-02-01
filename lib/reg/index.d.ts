@@ -1,6 +1,6 @@
-declare const reg: {
+declare const Reg: {
     email: RegExp;
     phoneNumber: RegExp;
     qq: RegExp;
 };
-export default reg;
+export default Reg;

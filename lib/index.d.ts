@@ -1,8 +1,8 @@
 import mixin from "./mixin";
 import deepClone from "./deepClone";
 import ua from './ua';
-import reg from './reg';
-import typeCheck from './type';
-import querystring from 'querystring';
+import Reg from './reg';
+import TypeCheck, { isFunction, isNil, isNull, isObject } from './typeCheck';
+import Querystring, { parse, stringify } from 'querystring';
 import useForceUpdate from "./hooks/useForceUpdate";
-export { mixin, deepClone, ua, reg, querystring, typeCheck, useForceUpdate };
+export { mixin, deepClone, ua, Reg, Querystring, parse, stringify, TypeCheck, isNil, isFunction, isObject, isNull, useForceUpdate };
