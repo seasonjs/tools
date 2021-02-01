@@ -2,13 +2,12 @@
 
 import {useCallback, useState} from "react"
 
-const EMPTY_ARRAY: any[] = []
+
 
 export default function useForceUpdate() {
     const [, setTick] = useState(0)
-
     return useCallback(() => {
         setTick(tick => tick + 1)
-    }, EMPTY_ARRAY)
+    }, [])
 }
 

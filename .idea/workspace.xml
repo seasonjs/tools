@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3202b5ad-c9a8-444b-b827-c6076185b940" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/hooks/useForceUpdate.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useForceUpdate.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/index.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index.esm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/type/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/type/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reg/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reg/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/type/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/typeCheck/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/type/类型检查.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/typeCheck/类型检查.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useForceUpdate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useForceUpdate.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +91,7 @@
       <updated>1611561208875</updated>
       <workItem from="1611561210027" duration="2418000" />
       <workItem from="1611563636984" duration="14976000" />
-      <workItem from="1612167477592" duration="2046000" />
+      <workItem from="1612167477592" duration="3522000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1611561550607</created>
@@ -167,7 +156,21 @@
       <option name="project" value="LOCAL" />
       <updated>1611715928642</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="增加hook">
+      <created>1612171435041</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612171435041</updated>
+    </task>
+    <task id="LOCAL-00011" summary="上传打包">
+      <created>1612171528832</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1612171528832</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +187,8 @@
     <MESSAGE value="增加类型判断" />
     <MESSAGE value="增加querystring" />
     <MESSAGE value="增加idea配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加idea配置" />
+    <MESSAGE value="增加hook" />
+    <MESSAGE value="上传打包" />
+    <option name="LAST_COMMIT_MESSAGE" value="上传打包" />
   </component>
 </project>
