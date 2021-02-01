@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3202b5ad-c9a8-444b-b827-c6076185b940" name="Default Changelist" comment="" />
+    <list default="true" id="3202b5ad-c9a8-444b-b827-c6076185b940" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/hooks/useForceUpdate.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useForceUpdate.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/index.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/type/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/type/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reg/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reg/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/type/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/typeCheck/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/type/类型检查.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/typeCheck/类型检查.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +59,10 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\v_hanhan\Desktop\learn\tools" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\v_hanhan\Desktop\learn\tools\src\typeCheck" />
+      <recent name="C:\Users\v_hanhan\Desktop\learn\tools\src" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -84,7 +101,8 @@
       <option name="presentableId" value="Default" />
       <updated>1611561208875</updated>
       <workItem from="1611561210027" duration="2418000" />
-      <workItem from="1611563636984" duration="14288000" />
+      <workItem from="1611563636984" duration="14976000" />
+      <workItem from="1612167477592" duration="2046000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1611561550607</created>
@@ -142,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611645268021</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="增加idea配置">
+      <created>1611715928642</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1611715928642</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +183,7 @@
     <MESSAGE value="增加正则判断" />
     <MESSAGE value="增加类型判断" />
     <MESSAGE value="增加querystring" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加querystring" />
+    <MESSAGE value="增加idea配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加idea配置" />
   </component>
 </project>

@@ -2,10 +2,10 @@ console.info("session tools v1.0.0");
 import mixin from "./mixin";
 import deepClone from "./deepClone";
 import ua from './ua';
-import reg from './reg';
-import typeCheck from './type';
-import querystring from 'querystring'
-
+import Reg from './reg';
+import TypeCheck, {isFunction, isNil, isNull, isObject} from './typeCheck';
+import Querystring, {parse, stringify} from 'querystring'
+import useForceUpdate from "./hooks/useForceUpdate"
 // const _: any = {
 //     mixin,
 //     deepClone,
@@ -19,8 +19,14 @@ export {
     mixin,
     deepClone,
     ua,
-    reg,
-    querystring,
-    typeCheck
+    Reg,
+    Querystring,
+    parse,
+    stringify,
+    TypeCheck,
+    isNil,
+    isFunction,
+    isObject,
+    isNull,
+    useForceUpdate
 };
-

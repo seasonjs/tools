@@ -19,11 +19,11 @@ declare function isObject(value: null | any): boolean;
  * @param value
  */
 declare function isFunction(value: any): boolean;
-declare const type: {
+declare const typeCheck: {
     isNil: typeof isNil;
     isNull: typeof isNull;
     isObject: typeof isObject;
     isFunction: typeof isFunction;
     getType: typeof getType;
 };
-export default type;
+export default typeCheck;
