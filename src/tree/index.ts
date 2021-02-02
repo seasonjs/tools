@@ -4,7 +4,7 @@ export default function travelTree(data: any, iteratorCallback: callBackProps, n
     data?.forEach((item: Record<string, any>, index: any) => {
         iteratorCallback(item, index);
         if (item[nodeName]) {
-            travelTree(data, iteratorCallback, nodeName);
+            travelTree(item[nodeName], iteratorCallback, nodeName);
         }
     });
     return data;

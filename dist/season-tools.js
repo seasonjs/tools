@@ -480,7 +480,7 @@
       data?.forEach((item, index) => {
           iteratorCallback(item, index);
           if (item[nodeName]) {
-              travelTree(data, iteratorCallback, nodeName);
+              travelTree(item[nodeName], iteratorCallback, nodeName);
           }
       });
       return data;
