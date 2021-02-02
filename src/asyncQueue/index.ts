@@ -1,7 +1,7 @@
 export class AsyncQueue {
     private funcQueue = []
     private isExec = false
-    add<T>({id, func}){
+    add({func}){
         if(!this.isExec){
             this.exec()
         }
