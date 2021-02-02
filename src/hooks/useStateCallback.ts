@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 
-const useStateCallback = (initialState) => {
+const useStateCallback = (initialState: any) => {
   const [state, setState] = useState(initialState)
-  const cbRef = useRef(null)
+  const cbRef = useRef<any>(null)
 
   const setStateCallback = useCallback((state, cb) => {
     cbRef.current = cb
