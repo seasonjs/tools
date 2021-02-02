@@ -6,6 +6,7 @@ import Reg from './reg';
 import TypeCheck, {isFunction, isNil, isNull, isObject} from './typeCheck';
 import Querystring, {parse, stringify} from 'querystring'
 import useForceUpdate from "./hooks/useForceUpdate"
+import useDownload from "./hooks/useDownLoad"
 // const _: any = {
 //     mixin,
 //     deepClone,
@@ -28,5 +29,6 @@ export {
     isFunction,
     isObject,
     isNull,
-    useForceUpdate
+    useForceUpdate,
+    useDownload,
 };

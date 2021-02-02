@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3202b5ad-c9a8-444b-b827-c6076185b940" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/hooks/useForceUpdate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useForceUpdate.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useDownLoad.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +93,7 @@
       <updated>1611561208875</updated>
       <workItem from="1611561210027" duration="2418000" />
       <workItem from="1611563636984" duration="14976000" />
-      <workItem from="1612167477592" duration="3522000" />
+      <workItem from="1612167477592" duration="5785000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1611561550607</created>
@@ -170,7 +172,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612171528832</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="简化代码">
+      <created>1612173823067</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1612173823067</updated>
+    </task>
+    <task id="LOCAL-00013" summary="调整格式">
+      <created>1612173845026</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1612173845026</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +205,8 @@
     <MESSAGE value="增加idea配置" />
     <MESSAGE value="增加hook" />
     <MESSAGE value="上传打包" />
-    <option name="LAST_COMMIT_MESSAGE" value="上传打包" />
+    <MESSAGE value="简化代码" />
+    <MESSAGE value="调整格式" />
+    <option name="LAST_COMMIT_MESSAGE" value="调整格式" />
   </component>
 </project>
