@@ -6,4 +6,7 @@ import Reg from './reg';
 import TypeCheck, { isFunction, isNil, isNull, isObject } from './typeCheck';
 import useForceUpdate from "./hooks/useForceUpdate";
 import useDownload from "./hooks/useDownLoad";
-export { mixin, deepClone, ua, Reg, parse, stringify, TypeCheck, isNil, isFunction, isObject, isNull, useForceUpdate, useDownload, };
+import useStateCallback from "./hooks/useStateCallback";
+import travelTree from "./tree";
+import { ArrayUtil } from './arrayUtils';
+export { mixin, deepClone, travelTree, ua, Reg, parse, stringify, TypeCheck, ArrayUtil, isNil, isFunction, isObject, isNull, useForceUpdate, useDownload, useStateCallback, };

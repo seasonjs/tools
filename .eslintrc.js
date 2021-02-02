@@ -18,7 +18,7 @@ module.exports = {
     // plugins: ['prettier'],
     rules: {
         'indent': ['error', 4],
-        'no-unused-vars': 'error',
+        'no-unused-vars': 'off',
         'no-restricted-globals': ['off', ...DOMGlobals, ...NodeGlobals],
         'no-console': 'off',
     }

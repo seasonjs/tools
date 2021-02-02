@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useRequest } from 'ahooks';
 
 // Copyright Joyent, Inc. and other Node contributors.
@@ -410,6 +410,10 @@ const TypeCheck = {
 };
 
 // https://github.com/mobxjs/mobx/blob/ddf99789daebc6a891c930bf77df132d532e090f/packages/mobx-react-lite/src/utils/utils.ts#L5
+/**
+ *  强制更新UI
+ *  @return forceUpdate 返回刷新实例函数
+ */
 function useForceUpdate() {
     const [, setTick] = useState(0);
     return useCallback(() => {
@@ -418,7 +422,7 @@ function useForceUpdate() {
 }
 
 /**
- * 文件流下载
+ *  文件流下载
  *  需要与后台约定获取文件名称的头部字段为content-disposition，需要后台设置Access-Control-Allow-Headers 放行content-disposition
  * @param url 下载地址
  * @param data 下载请求方法
@@ -453,6 +457,64 @@ const useDownLoad = (url, data, defaultFileName = 'log.xml', onError, service = 
     return useRequest(service, options);
 };
 
+const useStateCallback = (initialState) => {
+    const [state, setState] = useState(initialState);
+    const cbRef = useRef(null);
+    const setStateCallback = useCallback((state, cb) => {
+        cbRef.current = cb;
+        setState(state);
+    }, []);
+    useEffect(() => {
+        if (cbRef.current) {
+            cbRef.current(state);
+            cbRef.current = null;
+        }
+    }, [state]);
+    return [state, setStateCallback];
+};
+
+function travelTree(data, iteratorCallback, nodeName = "children") {
+    data?.forEach((item, index) => {
+        iteratorCallback(item, index);
+        if (item[nodeName]) {
+            travelTree(data, iteratorCallback, nodeName);
+        }
+    });
+    return data;
+}
+
+class ArrayUtil {
+    /**
+     * 找出两个数组不相同的元素的索引
+     * @param arr1
+     * @param arr2
+     */
+    static getDiffInds(arr1, arr2) {
+        const res = [];
+        if (arr1.length > arr2.length) {
+            res.push(...ArrayUtil.findIndex(arr1, arr2));
+        }
+        else {
+            res.push(...ArrayUtil.findIndex(arr2, arr1));
+        }
+        return res;
+    }
+    static findIndex(arr1, arr2) {
+        const res = [];
+        arr1.forEach((el, ind) => {
+            if (ind >= arr2.length) {
+                res.push(ind);
+            }
+            else {
+                if (el !== arr2[ind]) {
+                    res.push(ind);
+                }
+            }
+        });
+        return res;
+    }
+}
+
 console.info("session tools v1.0.0");
 
-export { Reg, TypeCheck, deepClone, isFunction, isNil, isNull, isObject, mixin, parse, stringify, index as ua, useDownLoad as useDownload, useForceUpdate };
+export { ArrayUtil, Reg, TypeCheck, deepClone, isFunction, isNil, isNull, isObject, mixin, parse, stringify, travelTree, index as ua, useDownLoad as useDownload, useForceUpdate, useStateCallback };

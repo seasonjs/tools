@@ -413,6 +413,10 @@
   };
 
   // https://github.com/mobxjs/mobx/blob/ddf99789daebc6a891c930bf77df132d532e090f/packages/mobx-react-lite/src/utils/utils.ts#L5
+  /**
+   *  强制更新UI
+   *  @return forceUpdate 返回刷新实例函数
+   */
   function useForceUpdate() {
       const [, setTick] = react.useState(0);
       return react.useCallback(() => {
@@ -421,7 +425,7 @@
   }
 
   /**
-   * 文件流下载
+   *  文件流下载
    *  需要与后台约定获取文件名称的头部字段为content-disposition，需要后台设置Access-Control-Allow-Headers 放行content-disposition
    * @param url 下载地址
    * @param data 下载请求方法
@@ -456,8 +460,67 @@
       return ahooks.useRequest(service, options);
   };
 
+  const useStateCallback = (initialState) => {
+      const [state, setState] = react.useState(initialState);
+      const cbRef = react.useRef(null);
+      const setStateCallback = react.useCallback((state, cb) => {
+          cbRef.current = cb;
+          setState(state);
+      }, []);
+      react.useEffect(() => {
+          if (cbRef.current) {
+              cbRef.current(state);
+              cbRef.current = null;
+          }
+      }, [state]);
+      return [state, setStateCallback];
+  };
+
+  function travelTree(data, iteratorCallback, nodeName = "children") {
+      data?.forEach((item, index) => {
+          iteratorCallback(item, index);
+          if (item[nodeName]) {
+              travelTree(data, iteratorCallback, nodeName);
+          }
+      });
+      return data;
+  }
+
+  class ArrayUtil {
+      /**
+       * 找出两个数组不相同的元素的索引
+       * @param arr1
+       * @param arr2
+       */
+      static getDiffInds(arr1, arr2) {
+          const res = [];
+          if (arr1.length > arr2.length) {
+              res.push(...ArrayUtil.findIndex(arr1, arr2));
+          }
+          else {
+              res.push(...ArrayUtil.findIndex(arr2, arr1));
+          }
+          return res;
+      }
+      static findIndex(arr1, arr2) {
+          const res = [];
+          arr1.forEach((el, ind) => {
+              if (ind >= arr2.length) {
+                  res.push(ind);
+              }
+              else {
+                  if (el !== arr2[ind]) {
+                      res.push(ind);
+                  }
+              }
+          });
+          return res;
+      }
+  }
+
   console.info("session tools v1.0.0");
 
+  exports.ArrayUtil = ArrayUtil;
   exports.Reg = Reg;
   exports.TypeCheck = TypeCheck;
   exports.deepClone = deepClone;
@@ -468,9 +531,11 @@
   exports.mixin = mixin;
   exports.parse = parse;
   exports.stringify = stringify;
+  exports.travelTree = travelTree;
   exports.ua = index;
   exports.useDownload = useDownLoad;
   exports.useForceUpdate = useForceUpdate;
+  exports.useStateCallback = useStateCallback;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
