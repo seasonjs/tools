@@ -4,6 +4,7 @@ import commonjs from '@rollup/plugin-commonjs'; // commonjs模块转换插件
 import eslint from '@rollup/plugin-eslint' // eslint插件
 import typescript from 'rollup-plugin-typescript2'
 import packageJSON from './package.json'
+import nodePolyfills from 'rollup-plugin-node-polyfills';
 
 const getPath = _path => path.resolve(__dirname, _path)
 
@@ -19,9 +20,14 @@ const tsPlugin = typescript({
 })
 // 基础配置
 const commonConf = {
+
     input: getPath('./src/index.ts'),
     plugins: [
-        nodeResolve(extensions),
+        nodePolyfills(),
+        nodeResolve({
+            extensions,
+            moduleDirectories: ['node_modules']
+        }),
         commonjs(),
         eslint({
             throwOnError: true,
@@ -29,7 +35,8 @@ const commonConf = {
             exclude: ['node_modules/**', 'lib/**']
         }),
         tsPlugin,
-    ]
+    ],
+    external: ['lodash', 'react', 'ahooks'],
 }
 // 需要导出的模块类型
 const outputMap = [
@@ -40,11 +47,20 @@ const outputMap = [
     {
         file: packageJSON.module, // es6模块
         format: 'es',
-    }
+    },
 ]
 
 
 const buildConf = options => Object.assign({}, commonConf, options)
 
 
-export default outputMap.map(output => buildConf({output: {name: packageJSON.name, ...output}}));
+export default outputMap.map(output => buildConf({
+    output: {
+        name: packageJSON.name,
+        globals: {
+            "react": "react",
+            "ahooks": "ahooks",
+        },
+        ...output,
+    }
+}));
