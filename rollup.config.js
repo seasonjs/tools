@@ -20,7 +20,6 @@ const tsPlugin = typescript({
 })
 // 基础配置
 const commonConf = {
-
     input: getPath('./src/index.ts'),
     plugins: [
         nodePolyfills(),
@@ -41,12 +40,16 @@ const commonConf = {
 // 需要导出的模块类型
 const outputMap = [
     {
-        file: packageJSON.main, // 通用模块
+        file: packageJSON.unpkg, // 通用模块
         format: 'umd',
     },
     {
         file: packageJSON.module, // es6模块
         format: 'es',
+    },
+    {
+        file: packageJSON.main,
+        format: 'cjs'
     },
 ]
 
@@ -54,13 +57,18 @@ const outputMap = [
 const buildConf = options => Object.assign({}, commonConf, options)
 
 
-export default outputMap.map(output => buildConf({
-    output: {
-        name: packageJSON.name,
-        globals: {
-            "react": "react",
-            "ahooks": "ahooks",
-        },
-        ...output,
-    }
-}));
+const result = outputMap.map(output => {
+    return buildConf({
+        output: {
+            name: packageJSON.name,
+            globals: {
+                "react": "react",
+                "ahooks": "ahooks",
+            },
+            ...output,
+        }
+    })
+});
+
+console.log(result);
+export default result;

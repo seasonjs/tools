@@ -1,12 +1,13 @@
 {
-  "name": "season-tools",
+  "name": "@seasonjs/tools",
   "version": "1.0.0",
-  "main": "lib/index.js",
-  "module": "lib/index.esm.js",
   "repository": "https://github.com/seasonjs/tools.git",
   "author": "Cyberhan123",
   "license": "MIT",
+  "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "module": "es/index.esm.js",
+  "unpkg": "dist/season-tool.js",
   "files": [
     "dist",
     "lib",
@@ -15,7 +16,8 @@
   ],
   "scripts": {
     "dev": "set NODE_ENV=developemnt&& rollup -c rollup.config.js -w",
-    "build": "set NODE_ENV=production&& rollup -c rollup.config.js"
+    "build": "set NODE_ENV=production&& rollup -c rollup.config.js",
+    "test": "node test/test.js"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
