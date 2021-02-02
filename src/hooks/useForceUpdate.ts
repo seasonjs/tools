@@ -2,6 +2,10 @@
 
 import {useCallback, useState} from "react"
 
+/**
+ *  强制更新UI
+ *  @return forceUpdate 返回刷新实例函数
+ */
 export default function useForceUpdate() {
     const [, setTick] = useState(0)
     return useCallback(() => {

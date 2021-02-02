@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3202b5ad-c9a8-444b-b827-c6076185b940" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useDownLoad.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useDownLoad.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useForceUpdate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useForceUpdate.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +94,7 @@
       <updated>1611561208875</updated>
       <workItem from="1611561210027" duration="2418000" />
       <workItem from="1611563636984" duration="14976000" />
-      <workItem from="1612167477592" duration="13724000" />
+      <workItem from="1612167477592" duration="15341000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1611561550607</created>
@@ -241,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612242002151</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="增加类型">
+      <created>1612245588163</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1612245588163</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +301,7 @@
     <MESSAGE value="调整打包细节" />
     <MESSAGE value="删除rc文件" />
     <MESSAGE value="增加测试文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加测试文件" />
+    <MESSAGE value="增加类型" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加类型" />
   </component>
 </project>
