@@ -70,5 +70,4 @@ const result = outputMap.map(output => {
     })
 });
 
-console.log(result);
 export default result;
