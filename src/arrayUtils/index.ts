@@ -29,4 +29,28 @@ export class ArrayUtil{
         })
         return res
     }
+
+    /**
+     * 判断数组长度是否为空
+     * @param array 
+     */
+    static arrayIsEmpty<T>(array: T[]){
+        return !array.length
+    }
+
+
+    /**
+     * 获取满足条件的索引
+     * @param array 
+     * @param compareCondition 
+     */
+    getIndex<T>(array: T[], compareCondition: Function){
+        const res: number[] = []
+        return array.reduce((preVal, curVal, curIdx)=>{
+            return compareCondition(curVal) ? [...preVal, curIdx] : preVal
+        },res)
+    }
+
+
+
 }
