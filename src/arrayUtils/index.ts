@@ -44,7 +44,7 @@ export class ArrayUtil{
      * @param array 
      * @param compareCondition 
      */
-    getIndex<T>(array: T[], compareCondition: Function){
+    static getIndex<T>(array: T[], compareCondition: Function){
         const res: number[] = []
         return array.reduce((preVal, curVal, curIdx)=>{
             return compareCondition(curVal) ? [...preVal, curIdx] : preVal
