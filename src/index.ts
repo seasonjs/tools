@@ -9,7 +9,7 @@ import useDownload from "./hooks/useDownLoad"
 import useStateCallback from "./hooks/useStateCallback";
 import travelTree from "./tree";
 import {ArrayUtil} from './arrayUtils'
-import {get,unset} from 'lodash'
+import {get,unset,set} from 'lodash'
 import insert from "./arrayUtils/insert";
 console.info("session tools v1.0.0");
 
@@ -33,4 +33,5 @@ export {
     get,
     insert,
     unset,
+    set,
 };

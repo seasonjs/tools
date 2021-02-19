@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3202b5ad-c9a8-444b-b827-c6076185b940" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/arrayUtils/insert.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
@@ -96,7 +95,7 @@
       <workItem from="1611563636984" duration="14976000" />
       <workItem from="1612167477592" duration="18259000" />
       <workItem from="1612254364972" duration="4493000" />
-      <workItem from="1612407037312" duration="1627000" />
+      <workItem from="1612407037312" duration="2964000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1611561550607</created>
@@ -280,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612333481738</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="增加几个小方法">
+      <created>1612432973871</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1612432973871</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +318,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="初始化" />
     <MESSAGE value="调试rollup" />
     <MESSAGE value="几个小试牛刀的工具方法" />
     <MESSAGE value="调整与编译" />
@@ -337,6 +342,7 @@
     <MESSAGE value="增加引用和链接" />
     <MESSAGE value="增加编译和树遍历" />
     <MESSAGE value="调整异步队列" />
-    <option name="LAST_COMMIT_MESSAGE" value="调整异步队列" />
+    <MESSAGE value="增加几个小方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加几个小方法" />
   </component>
 </project>
