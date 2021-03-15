@@ -1,6 +1,5 @@
 import {parse, stringify} from "querystring";
 import mixin from "./mixin";
-import deepClone from "./deepClone";
 import ua from './ua';
 import Reg from './reg';
 import TypeCheck, {isFunction, isNil, isNull, isObject} from './typeCheck';
@@ -9,13 +8,13 @@ import useDownload from "./hooks/useDownLoad"
 import useStateCallback from "./hooks/useStateCallback";
 import travelTree from "./tree";
 import {ArrayUtil} from './arrayUtils'
-import {get,unset,set} from 'lodash'
+import {get,unset,set,flow,cloneDeep,cloneDeepWith} from 'lodash'
 import insert from "./arrayUtils/insert";
 console.info("session tools v1.0.0");
 
 export {
     mixin,
-    deepClone,
+    // deepClone,
     travelTree,
     ua,
     Reg,
@@ -34,4 +33,8 @@ export {
     insert,
     unset,
     set,
+    flow,
+    flow as pip,
+    cloneDeep,
+    cloneDeepWith,
 };

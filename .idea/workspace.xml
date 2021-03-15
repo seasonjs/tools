@@ -43,6 +43,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Users\v_hanhan\Desktop\learn\tools\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -95,7 +96,11 @@
       <workItem from="1611563636984" duration="14976000" />
       <workItem from="1612167477592" duration="18259000" />
       <workItem from="1612254364972" duration="4493000" />
-      <workItem from="1612407037312" duration="2964000" />
+      <workItem from="1612407037312" duration="3608000" />
+      <workItem from="1613705723841" duration="77000" />
+      <workItem from="1613705815248" duration="92000" />
+      <workItem from="1613705946977" duration="84000" />
+      <workItem from="1615787529701" duration="1126000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1611561550607</created>
@@ -286,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612432973871</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="增加几个小方法">
+      <created>1613696583095</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1613696583095</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
