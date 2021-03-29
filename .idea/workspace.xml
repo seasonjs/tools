@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3202b5ad-c9a8-444b-b827-c6076185b940" name="Default Changelist" comment="feat: set build">
+    <list default="true" id="3202b5ad-c9a8-444b-b827-c6076185b940" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617009417646</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="feat: set version">
+      <created>1617015474417</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1617015474417</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +376,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="增加ua判断" />
     <MESSAGE value="增加正则判断" />
     <MESSAGE value="增加类型判断" />
     <MESSAGE value="增加querystring" />
@@ -395,6 +400,7 @@
     <MESSAGE value="更新库" />
     <MESSAGE value="feat: set today start" />
     <MESSAGE value="feat: add new utils" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add new utils" />
+    <MESSAGE value="feat: set version" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: set version" />
   </component>
 </project>
