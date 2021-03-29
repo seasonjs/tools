@@ -17,8 +17,8 @@ jobs:
         with:
           node-version: 12
       - name: Install Dependencies
-        run: npm install
-      - run: npm publish
+        run: npm ci
+      - run: npm build
 
   publish-npm:
     needs: build

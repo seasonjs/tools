@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3202b5ad-c9a8-444b-b827-c6076185b940" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/hooks/forwardRefStatics.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useHookformDevtools.tsx" afterDir="false" />
+    <list default="true" id="3202b5ad-c9a8-444b-b827-c6076185b940" name="Default Changelist" comment="feat: add new utils">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +104,8 @@
       <workItem from="1613705946977" duration="84000" />
       <workItem from="1615787529701" duration="1738000" />
       <workItem from="1616119157918" duration="13000" />
-      <workItem from="1617001917893" duration="1425000" />
+      <workItem from="1617001917893" duration="2028000" />
+      <workItem from="1617005030786" duration="2574000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1611561550607</created>
@@ -319,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617002288431</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="feat: add new utils">
+      <created>1617003655886</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1617003655886</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +356,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="调整与编译" />
     <MESSAGE value="增加ua判断" />
     <MESSAGE value="增加正则判断" />
     <MESSAGE value="增加类型判断" />
@@ -376,6 +380,7 @@
     <MESSAGE value="增加几个小方法" />
     <MESSAGE value="更新库" />
     <MESSAGE value="feat: set today start" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: set today start" />
+    <MESSAGE value="feat: add new utils" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add new utils" />
   </component>
 </project>

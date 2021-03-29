@@ -41,8 +41,8 @@
     "typescript": "^4.2.3"
   },
   "peerDependencies": {
-    "ahooks": "^2.9.4",
-    "lodash": "^4.17.20",
+    "ahooks": "^2.6.0",
+    "lodash": "^4.0.1",
     "react": "^16.8.0"
   },
   "dependencies": {
