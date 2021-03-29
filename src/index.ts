@@ -8,9 +8,13 @@ import useDownload from "./hooks/useDownLoad"
 import useStateCallback from "./hooks/useStateCallback";
 import travelTree from "./tree";
 import {ArrayUtil} from './arrayUtils'
-import {get,unset,set,flow,cloneDeep,cloneDeepWith} from 'lodash'
+import {cloneDeep, cloneDeepWith, flow, get, set, unset} from 'lodash'
 import insert from "./arrayUtils/insert";
-console.info("session tools v1.0.0");
+import {todayStart,todayEnd} from "./day"
+
+
+const seasonToolsVersion = "v1.0.0"
+console.info(`season tools ${seasonToolsVersion}`);
 
 export {
     mixin,
@@ -37,4 +41,8 @@ export {
     flow as pip,
     cloneDeep,
     cloneDeepWith,
+    todayStart,
+    todayEnd,
+    seasonToolsVersion as Version,
+
 };
