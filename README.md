@@ -24,7 +24,7 @@ yarn add @seasonjs/tools
 
 ## 使用说明
 
-规划中...
+https://seasonjs.github.io/tools/
 
 
 ## 项目维护
