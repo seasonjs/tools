@@ -1,25 +1,6 @@
-const path = require('path')
-const resolve = _path => path.resolve(__dirname, _path)
-const DOMGlobals = ['window', 'document']
-const NodeGlobals = ['module', 'require']
-
+// eslint 配置
+// https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md
 
 module.exports = {
-    env: {
-        browser: true,
-        es6: true
-    },
-    parser: '@typescript-eslint/parser', // 配置ts解析器
-    parserOptions: {
-        project: resolve('./tsconfig.json'),
-        tsconfigRootDir: resolve('./'),
-        sourceType: 'module'
-    },
-    // plugins: ['prettier'],
-    rules: {
-        'indent': ['error', 4],
-        'no-unused-vars': 'off',
-        'no-restricted-globals': ['off', ...DOMGlobals, ...NodeGlobals],
-        'no-console': 'off',
-    }
+    extends: [require.resolve('@umijs/fabric/dist/eslint')],
 };

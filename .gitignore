@@ -34,5 +34,5 @@ yarn.lock
 #npmrc
 .npmrc
 
-.idea
+/.idea
 .umi
