@@ -31,6 +31,7 @@
     "@umijs/fabric": "^2.5.7",
     "cross-env": "^7.0.3",
     "dumi": "^1.1.10",
+    "dumi-theme-default": "^1.0.10",
     "hoist-non-react-statics": "^3.3.2",
     "jest": "^27.0.0-next.1",
     "jest-fetch-mock": "^3.0.3",
