@@ -45,8 +45,9 @@
     "react": "^16.8.6"
   },
   "dependencies": {
-    "ahooks": "^2.10.0",
     "@hookform/devtools": "^2.2.1",
-    "hoist-non-react-statics": "^3.3.2"
+    "ahooks": "^2.10.0",
+    "hoist-non-react-statics": "^3.3.2",
+    "querystring": "^0.2.1"
   }
 }
