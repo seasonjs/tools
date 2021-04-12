@@ -1,4 +1,4 @@
-class ua {
+class UA {
 
     public browser = {};
 
@@ -30,25 +30,23 @@ class ua {
         return false;
     }
 
-    private commonUAJudge(engineVer: string, version: string | number, engine: string, ua: string, name: string) {
-        //@ts-ignore
+    private static commonUAJudge(engineVer: string, version: string | number, engine: string, uaStr: string, name: string) {
         if (window?.opera) {
-            //@ts-ignore
             engineVer = version = window.opera.version();
             engine = 'opera';
-        } else if (/AppleWebKit\/(\S+)/.test(ua)) {
-            engineVer = RegExp['$1'];
+        } else if (/AppleWebKit\/(\S+)/.test(uaStr)) {
+            engineVer = RegExp.$1;
             engine = 'webkit';
-            if (/Chrome\/(\S+)/.test(ua)) {
-                version = RegExp['$1'];
+            if (/Chrome\/(\S+)/.test(uaStr)) {
+                version = RegExp.$1;
                 name = 'chrome';
-            } else if (/Version\/(\S+)/.test(ua)) {
-                version = RegExp['$1'];
+            } else if (/Version\/(\S+)/.test(uaStr)) {
+                version = RegExp.$1;
                 name = 'safari';
             } else {
-                //approximate version
-                var safariVersion = 1;
-                var wekitVersion = parseFloat(engineVer);
+                // approximate version
+                let safariVersion: number;
+                const wekitVersion = parseFloat(engineVer);
 
                 if (wekitVersion < 100) {
                     safariVersion = 1;
@@ -63,20 +61,20 @@ class ua {
                 version = safariVersion;
                 name = 'safari';
             }
-        } else if (/KHTML\/(\S+)/.test(ua) || /Konqueror\/([^;]+)/.test(ua)) {
-            engineVer = version = RegExp['$1'];
+        } else if (/KHTML\/(\S+)/.test(uaStr) || /Konqueror\/([^;]+)/.test(uaStr)) {
+            engineVer = version = RegExp.$1;
             engine = 'khtml';
             name = 'konq';
-        } else if (/rv:([^\)]+)\) Gecko\/\d{8}/.test(ua)) {
-            engineVer = RegExp['$1'];
+        } else if (/rv:([^\)]+)\) Gecko\/\d{8}/.test(uaStr)) {
+            engineVer = RegExp.$1;
             engine = 'gecko';
-            //determine if it’s Firefox
-            if (/Firefox\/(\S+)/.test(ua)) {
-                version = RegExp['$1'];
+            // determine if it’s Firefox
+            if (/Firefox\/(\S+)/.test(uaStr)) {
+                version = RegExp.$1;
                 name = 'firefox';
             }
-        } else if (/MSIE ([^;]+)/.test(ua)) {
-            engineVer = version = RegExp['$1'];
+        } else if (/MSIE ([^;]+)/.test(uaStr)) {
+            engineVer = version = RegExp.$1;
             engine = 'ie';
             name = 'ie';
         }
@@ -84,14 +82,12 @@ class ua {
     }
 
 
-    /*
-    * 获取PC端浏览器信息
-    * @name    getPCBrowserInfo
-    * @param   {Object}    浏览器信息
-    */
+    /**
+     * 获取PC端浏览器信息
+     * @name    getPCBrowserInfo
+     */
     public getPCBrowserInfo() {
         const ua = navigator.userAgent;
-
         let name = 'unknown';
         let version: string | number = 'unknown';
         let engine = 'unknown';
@@ -106,7 +102,7 @@ class ua {
         } else if (tempUa.indexOf('mac') > -1) {
             machineSys = 'mac';
         }
-        const __ret = this.commonUAJudge(engineVer, version, engine, ua, name);
+        const __ret = UA.commonUAJudge(engineVer, version, engine, ua, name);
         engineVer = __ret.engineVer;
         version = __ret.version;
         engine = __ret.engine;
@@ -125,10 +121,9 @@ class ua {
     }
 
 
-    /*
+    /**
      * 获取mobile端浏览器信息
      * @name    getMobileBrowserInfo
-     * @param   {Object}    浏览器信息
      */
     public getMobileBrowserInfo() {
         const ua = navigator.userAgent;
@@ -140,14 +135,14 @@ class ua {
         let machineSys = ua.substring(ua.indexOf('(') + 1, ua.indexOf(')')).split(';')[0];
 
 
-        if (!!ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)) {
+        if (ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)) {
             machineSys = 'iphone';
         } else if (ua.indexOf('Android') > -1 || ua.indexOf('Linux') > -1) {
             machineSys = 'android';
         } else if (ua.indexOf('Windows Phone') > -1) {
             machineSys = 'windows phone';
         }
-        const __ret = this.commonUAJudge(engineVer, version, engine, ua, name);
+        const __ret = UA.commonUAJudge(engineVer, version, engine, ua, name);
         engineVer = __ret.engineVer;
         version = __ret.version;
         engine = __ret.engine;
@@ -168,4 +163,4 @@ class ua {
 
 }
 
-export default new ua();
+export default new UA();

@@ -14,6 +14,7 @@ import {todayStart,todayEnd} from "./day"
 
 
 const seasonToolsVersion = "v1.0.0"
+// eslint-disable-next-line
 console.info(`season tools ${seasonToolsVersion}`);
 
 export {
