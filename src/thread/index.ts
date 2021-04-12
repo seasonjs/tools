@@ -1,11 +1,11 @@
-const makeWorker = (fn: any) => {
-    let pendingJobs = {};
+export const makeWorker = (fn: any) => {
+    const pendingJobs = {};
 
     const worker = new Worker(
         URL.createObjectURL(new Blob([`(${fn.toString()})()`]))
     );
 
-    worker.onmessage = ({ data: { result, jobId } }) => {
+    worker.onmessage = ({data: {result, jobId}}) => {
         // 调用resolve，改变Promise状态
         // @ts-ignore
         pendingJobs[jobId](result);
@@ -19,6 +19,6 @@ const makeWorker = (fn: any) => {
             const jobId = String(Math.random());
             // @ts-ignore
             pendingJobs[jobId] = resolve;
-            worker.postMessage({ jobId, message });
+            worker.postMessage({jobId, message});
         });
 };

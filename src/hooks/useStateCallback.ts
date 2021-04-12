@@ -4,9 +4,9 @@ const useStateCallback = (initialState: any) => {
     const [state, setState] = useState(initialState)
     const cbRef = useRef<any>(null)
 
-    const setStateCallback = useCallback((state, cb) => {
+    const setStateCallback = useCallback((tState, cb) => {
         cbRef.current = cb
-        setState(state)
+        setState(tState)
     }, [])
 
     useEffect(() => {

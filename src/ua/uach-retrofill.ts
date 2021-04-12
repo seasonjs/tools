@@ -1,3 +1,4 @@
+/* eslint-disable*/
 /**
  * Copyright 2020 Google LLC
  *
@@ -83,7 +84,7 @@ async function getUserAgentUsingClientHints(hints: any) {
             values.architecture = 'x86';
         }
         if (!values.uaFullVersion) {
-            values.uaFullVersion = fallback_version + '.0.0.0';
+            values.uaFullVersion = `${fallback_version  }.0.0.0`;
         }
         if (!values.model) {
             values.model = '';
