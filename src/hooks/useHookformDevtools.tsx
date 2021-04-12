@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { DevTool } from '@hookform/devtools';
+import {DevTool} from '@hookform/devtools';
 
-const useFormDevTool = (control: any) => {
-    const Modal = React.memo(({ children }) => {
+export const useFormDevTool = (control: any) => {
+    const Modal = React.memo(({children}) => {
         let domEl = null;
         if (!document.querySelector('.oit-model')) {
             domEl = document.createElement('div');
@@ -18,7 +18,7 @@ const useFormDevTool = (control: any) => {
     const Tool = () => (
         <>
             <Modal>
-                <DevTool control={control} />
+                <DevTool control={control}/>
             </Modal>
         </>
     );
@@ -26,4 +26,3 @@ const useFormDevTool = (control: any) => {
         DevTool: Tool,
     };
 };
-export default useFormDevTool;

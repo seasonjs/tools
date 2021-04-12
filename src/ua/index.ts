@@ -29,7 +29,7 @@ class UA {
         }
         return false;
     }
-
+    /* eslint-disable */
     private static commonUAJudge(engineVer: string, version: string | number, engine: string, uaStr: string, name: string) {
         if (window?.opera) {
             engineVer = version = window.opera.version();
@@ -80,7 +80,7 @@ class UA {
         }
         return {engineVer, version, engine, name};
     }
-
+    /* eslint-enable */
 
     /**
      * 获取PC端浏览器信息
@@ -102,12 +102,13 @@ class UA {
         } else if (tempUa.indexOf('mac') > -1) {
             machineSys = 'mac';
         }
+        /* eslint-disable */
         const __ret = UA.commonUAJudge(engineVer, version, engine, ua, name);
         engineVer = __ret.engineVer;
         version = __ret.version;
         engine = __ret.engine;
         name = __ret.name;
-
+        /* eslint-enable */
         return {
             'machine': 'PC',
             'name': name,
@@ -142,13 +143,13 @@ class UA {
         } else if (ua.indexOf('Windows Phone') > -1) {
             machineSys = 'windows phone';
         }
+        /* eslint-disable */
         const __ret = UA.commonUAJudge(engineVer, version, engine, ua, name);
         engineVer = __ret.engineVer;
         version = __ret.version;
         engine = __ret.engine;
         name = __ret.name;
-
-
+        /* eslint-enable */
         return {
             'machine': 'MOBILE',
             'name': name,

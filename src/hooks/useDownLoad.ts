@@ -18,7 +18,7 @@ import {useRequest} from "ahooks"
  * @param options 自定义操作方法体
  *
  */
-const useDownLoad = (
+export const useDownLoad = (
     url: any,
     data: any,
     defaultFileName = 'log.xml',
@@ -55,4 +55,3 @@ const useDownLoad = (
         options
     );
 };
-export default useDownLoad;
