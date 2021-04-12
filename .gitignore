@@ -8,31 +8,18 @@
 /package-lock.json
 
 # production
-#/dist
-/build
+/dist
+/docs-dist
 
 # misc
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-debug.log
-
-
-# testing
-/coverage
-
-#yarn
-yarn.lock
-
-#npmrc
-.npmrc
-
-/.idea/*
+# umi
 .umi
+.umi-production
+.umi-test
+.env.local
+
+# ide
+/.vscode
+/.idea
