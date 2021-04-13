@@ -1,5 +1,5 @@
 ---
-title: tree - 树
+title: Tree
 ---
 
 # 树

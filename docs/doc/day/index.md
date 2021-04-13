@@ -1,5 +1,5 @@
 ---
-title: 日期
+title: Day
 ---
 
 ## 日期
@@ -8,11 +8,18 @@ title: 日期
 
 ```tsx
 import React from 'react';
-import { todayStart, todayEnd } from '@seasonjs/tools';
+import {
+  somedayStart,
+  somedayEnd,
+  todayStart,
+  todayEnd,
+} from '@seasonjs/tools';
 
 export default () => {
   return (
     <div>
+      <p>今天开始: {somedayStart().toString()}</p>
+      <p>今天结束: {somedayEnd().toString()}</p>
       <p>今天开始: {todayStart.toString()}</p>
       <p>今天结束: {todayEnd.toString()}</p>
     </div>
