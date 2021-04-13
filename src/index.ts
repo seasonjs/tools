@@ -1,56 +1,25 @@
-import {parse, stringify} from "querystring";
-import mixin from "./mixin";
-import ua from './ua';
-import Reg from './reg';
-import TypeCheck, {isFunction, isNil, isNull, isObject} from './typeCheck';
-import {useForceUpdate} from "./hooks/useForceUpdate"
-import {useDownLoad} from "./hooks/useDownLoad"
-import {useStateCallback} from "./hooks/useStateCallback";
-import travelTree from "./tree";
-import {ArrayUtil} from './arrayUtils'
-import {cloneDeep, cloneDeepWith, flow, get, set, unset} from 'lodash'
-import insert from "./arrayUtils/insert";
-import {todayEnd, todayStart} from "./day";
-import {useResizeObserver} from "./hooks/useResizeObserver";
-import {useFormDevTool} from './hooks/useHookformDevtools'
-import { useIsomorphicLayoutEffect } from "./hooks/useIsomorphiclayoutEffect";
-import { forwardRefWithStatics } from "./hoc/forwardRefStatics";
-
-
-const seasonToolsVersion = "v1.0.0"
+let a =
+  'background: #606060; color: #fff; border-radius: 3px 0 0 3px; padding: 3px;';
+let b =
+  'background: #1475B2; color: #fff; border-radius: 0 3px 3px 0; padding: 3px 3px 3px 6px;';
+const seasonToolsVersion = 'v1.0.0';
 // eslint-disable-next-line
-console.info(`season tools ${seasonToolsVersion}`);
+console.info(`%c season tools %c ${seasonToolsVersion}`, a, b);
 
-export {
-    mixin,
-    // deepClone,
-    travelTree,
-    ua,
-    Reg,
-    parse,
-    stringify,
-    TypeCheck,
-    ArrayUtil,
-    isNil,
-    isFunction,
-    isObject,
-    isNull,
-    useForceUpdate,
-    useDownLoad,
-    useStateCallback,
-    get,
-    insert,
-    unset,
-    set,
-    flow,
-    flow as pip,
-    cloneDeep,
-    cloneDeepWith,
-    todayStart,
-    todayEnd,
-    seasonToolsVersion as Version,
-    useResizeObserver,
-    useFormDevTool,
-    useIsomorphicLayoutEffect,
-    forwardRefWithStatics
-};
+// export * from 'react-hook-form';
+// export * from 'ahooks';
+// export * from "querystring";
+export * from './mixin';
+export * from './ua';
+export * from './reg';
+export * from './typeCheck';
+export * from './hooks/useForceUpdate';
+export * from './hooks/useDownLoad';
+export * from './hooks/useStateCallback';
+export * from './tree';
+export * from './array';
+export * from './day';
+export * from './hooks/useResizeObserver';
+export * from './hooks/useHookFormDevTools';
+export * from './hooks/useIsomorphiclayoutEffect';
+export * from './hoc/forwardRefStatics';

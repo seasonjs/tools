@@ -4,8 +4,8 @@
 
 <p align="center">
 
-<a href="https://www.npmjs.com/package/vue"><img src="https://img.shields.io/npm/v/@seasonjs/tools.svg?sanitize=true" alt="Version"></a>
-<a href="https://www.npmjs.com/package/vue"><img src="https://img.shields.io/npm/l/@seasonjs/tools.svg?sanitize=true" alt="License"></a>
+<a href="https://www.npmjs.com/package/@seasonjs/tools"><img src="https://img.shields.io/npm/v/@seasonjs/tools.svg?sanitize=true" alt="Version"></a>
+<a href="https://www.npmjs.com/package/@seasonjs/tools"><img src="https://img.shields.io/npm/l/@seasonjs/tools.svg?sanitize=true" alt="License"></a>
 [![Node.js Package](https://github.com/seasonjs/tools/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/seasonjs/tools/actions/workflows/npm-publish.yml)
 
 </p>
@@ -58,4 +58,10 @@ $ npm run docs:build
 
 ```bash
 $ npm run build
+```
+
+git(必须区分大小写，因为 js 的 import 大小写敏感)
+
+```
+git config core.ignorecase false
 ```
