@@ -1,10 +1,14 @@
 ---
-title: array - 数组，队列，栈，双端队列
-
+title: Array
 ---
-```jsx
-import React from 'react';
-import {insert} from '../../../src/index'
 
-export default () => <h1>{insert([],0,"1")}</h1>;
+## 数组
+
+### 快速上手
+
+```tsx
+import React from 'react';
+import { insert } from '@seasonjs/tools';
+
+export default () => <h1>{insert([], 0, '1')}</h1>;
 ```

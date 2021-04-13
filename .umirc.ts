@@ -11,6 +11,10 @@ export default defineConfig({
     { title: 'GitHub', path: 'https://github.com/seasonjs/tools' },
     { title: '更新日志', path: 'https://github.com/seasonjs/tools/releases' },
   ],
+  logo:
+    'https://raw.githubusercontent.com/seasonjs/tools/main/docs/public/icon.svg',
+  favicon:
+    'https://raw.githubusercontent.com/seasonjs/tools/main/docs/public/icon.svg',
   // extraBabelPlugins: [
   //     [
   //         'import',
