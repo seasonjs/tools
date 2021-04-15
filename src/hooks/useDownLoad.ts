@@ -1,4 +1,4 @@
-import {useRequest} from "ahooks"
+import { useRequest } from 'ahooks';
 
 /**
  * @description
@@ -7,9 +7,11 @@ import {useRequest} from "ahooks"
  *
  * @param url 下载地址
  *
- * @param data 下载请求方法
+ * @param data 下载请求体
  *
  * @param defaultFileName 默认的下载文件名称
+ *
+ * @param fileName 无法通过 content-disposition 头部字段 字段获取文件名的文件名获取方法
  *
  * @param onError 错误处理，
  *
@@ -19,39 +21,34 @@ import {useRequest} from "ahooks"
  *
  */
 export const useDownLoad = (
-    url: any,
-    data: any,
-    defaultFileName = 'log.xml',
-    onError: any,
-    service = (param: any) => (
-        {
-            url,
-            method: 'post',
-            headers: {'Content-Type': 'application/octet-stream'},
-            responseType: 'blob',
-            data: data ?? param
-
-        }),
-    options = {
-        manual: true,
-        onError,
-        onSuccess: (response: any) => {
-            const contentDisposition = response?.headers['content-disposition'];
-            const fileName = contentDisposition?.match(/(filename=")(.*)(")$/)[2] ?? undefined;
-            const blob = new Blob([response?.data ?? '内容为空！'], {
-                type: 'charset=utf-8',
-            });
-            // console.log(fileName);
-            // window.open(URL.createObjectURL(blob));
-            const link = document.createElement('a');
-            link.download = fileName ?? defaultFileName;
-            link.href = URL.createObjectURL(blob);
-            link.click();
-        }
-    }
+  url: any,
+  data: any,
+  defaultFileName = 'log.xml',
+  fileName: any,
+  onError: any,
+  service = (param: any) => ({
+    url,
+    method: 'post',
+    headers: { 'Content-Type': 'application/octet-stream' },
+    responseType: 'blob',
+    data: data ?? param,
+  }),
+  options = {
+    manual: true,
+    onError,
+    onSuccess: (response: any) => {
+      const contentDisposition = response?.headers['content-disposition'];
+      const headerFileName =
+        contentDisposition?.match(/(filename=")(.*)(")$/)[2] ?? undefined;
+      const blob = new Blob([response?.data ?? '内容为空！'], {
+        type: 'charset=utf-8',
+      });
+      const link = document.createElement('a');
+      link.download = headerFileName ?? fileName ?? defaultFileName;
+      link.href = URL.createObjectURL(blob);
+      link.click();
+    },
+  },
 ) => {
-    return useRequest(
-        service,
-        options
-    );
+  return useRequest(service, options);
 };
