@@ -181,3 +181,6 @@
 import Bowser from 'bowser';
 
 export const ua = Bowser.parse(window.navigator.userAgent);
+const browser = Bowser.getParser(window.navigator.userAgent);
+export const satisfies = (checkTree: Record<string, any>) =>
+  browser.satisfies(checkTree);
