@@ -23,5 +23,7 @@ export * from './day';
 export * from './hooks/useResizeObserver';
 export * from './hooks/useHookFormDevTools';
 export * from './hooks/useIsomorphiclayoutEffect';
+export * from './hooks/useInsertStyle';
+export * from './dom/insertStyle';
 export * from './hoc/forwardRefStatics';
 export * from './list';
