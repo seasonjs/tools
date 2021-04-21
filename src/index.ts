@@ -27,3 +27,4 @@ export * from './hooks/useInsertStyle';
 export * from './dom/insertStyle';
 export * from './hoc/forwardRefStatics';
 export * from './list';
+export * from './dom/defaultPassiveEvents';
