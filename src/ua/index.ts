@@ -180,7 +180,27 @@
 // export const ua = new UA();
 import Bowser from 'bowser';
 
+/**
+ * @description 这个UA模块更想成为的是Bowser的封装而不是一个人蹩脚的维护一滩死水的代码
+ */
+
+/**
+ * @description 返回标准的Bowser对象
+ *
+ * @return ParsedResult
+ * {
+ *     browser: BrowserDetails;
+ *     os: OSDetails;
+ *     platform: PlatformDetails;
+ *     engine: EngineDetails;
+ * }
+ */
 export const ua = Bowser.parse(window.navigator.userAgent);
 const browser = Bowser.getParser(window.navigator.userAgent);
+/**
+ * @description 判断宿主浏览器是否符合 checkTree 的规则
+ * @param checkTree
+ * @return Boolean
+ */
 export const satisfies = (checkTree: Record<string, any>) =>
   browser.satisfies(checkTree);

@@ -39,6 +39,7 @@
     "npm": "<7"
   },
   "dependencies": {
+    "@flowjs/flow.js": "^2.14.1",
     "@hookform/devtools": "^3.0.2",
     "ahooks": "^2.10.0",
     "bowser": "^2.11.0",
@@ -54,6 +55,7 @@
   },
   "devDependencies": {
     "@seasonjs/tools": "^0.0.5",
+    "@types/flowjs": "^2.13.4",
     "@types/hoist-non-react-statics": "^3.3.1",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
