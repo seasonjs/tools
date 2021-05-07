@@ -14,7 +14,7 @@ import { utils } from 'umi';
 yarn add @umijs/utils -D
 ```
 
-```jsx
+```js
 import xxx from '@umijs/utils';
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: useDownLoad-下载
+title: useDownLoad
 ---
 
 ## 常用下载方法

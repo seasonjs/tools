@@ -1,8 +1,8 @@
 ---
-title: useFormDevTool react-hook-form debug工具封装
+title: useFormDevTool
 ---
 
-## debug 工具
+## react-hook-form debug 工具封装
 
 ### 快速上手
 

@@ -1,5 +1,5 @@
 /**
- * 找出两个数组不相同的元素的索引
+ * @description.zh-CN 找出两个数组不相同的元素的索引
  * @param arr1
  * @param arr2
  */
@@ -26,15 +26,14 @@ export function findIndex<T>(arr1: T[], arr2: T[]) {
 }
 
 /**
- * 判断数组长度是否为空
- * @param array
+ * @description.zh-CN 判断数组长度是否为空
  */
 export function arrayIsEmpty<T>(array: T[]) {
   return !array.length;
 }
 
 /**
- * 获取满足条件的索引
+ * @description.zh-CN 获取满足条件的索引
  * @param array
  * @param compareCondition
  */
@@ -50,7 +49,7 @@ export function getIndex<T>(
 
 // https://github.com/react-hook-form/react-hook-form/blob/master/src/utils/insert.ts
 /**
- * 数组插入
+ * @description 数组插入
  * @param data 数组
  * @param index 索引
  * @param value 值

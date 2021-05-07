@@ -13,21 +13,15 @@ export * from './mixin';
 export * from './ua';
 export * from './reg';
 export * from './typeCheck';
-export * from './hooks/useForceUpdate';
-export * from './hooks/useDownLoad';
-export * from './hooks/useStateCallback';
 export * from './tree';
 export * from './array';
 export * from './day';
-export * from './hooks/useResizeObserver';
-export * from './hooks/useHookFormDevTools';
-export * from './hooks/useIsomorphiclayoutEffect';
-export * from './hooks/useInsertStyle';
 export * from './dom/insertStyle';
 export * from './hoc/forwardRefStatics';
 export * from './list';
 export * from './dom/defaultPassiveEvents';
 export * from './hooks/useHeightLight';
+export * from './hooks';
 // export * from '@umijs/utils';
 // export {
 //   // spawn,

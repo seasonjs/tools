@@ -4,7 +4,8 @@ export default defineConfig({
   base: '/tools',
   publicPath: '/tools/',
   exportStatic: {}, // 将所有路由输出为 HTML 目录结构，以免刷新页面时 404
-  ssr: {},
+  // ssr: {},
+  locales: [['zh-CN', '中文']],
   title: 'seasonjs/tools',
   mode: 'site',
   navs: [

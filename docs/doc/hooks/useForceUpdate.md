@@ -1,5 +1,5 @@
 ---
-title: useForceUpdate-强制更新
+title: useForceUpdate
 ---
 
 ## 强制更新
