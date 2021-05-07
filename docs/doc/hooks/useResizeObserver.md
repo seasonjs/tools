@@ -2,12 +2,12 @@
 title: useResizeObserver
 ---
 
-## debug 工具
+## 元素重置宽高大小
 
 ### 快速上手
 
-```tsx
-import React from 'react';
+```tsx | pure
+import React, { useRef } from 'react';
 import { useResizeObserver } from '@seasonjs/tools';
 
 let a = 0;

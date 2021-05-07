@@ -6,7 +6,7 @@ title: Thread
 
 ## 快速上手
 
-```ts
+```tsx | pure
 import { makeWorker } from '@seasonjs/tools';
 
 export default () => {

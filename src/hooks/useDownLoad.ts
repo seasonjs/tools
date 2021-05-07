@@ -1,8 +1,7 @@
 import { useRequest } from 'ahooks';
 
 /**
- * @description
- *  文件流下载
+ * @description 文件流下载
  *  需要与后台约定获取文件名称的头部字段为content-disposition，需要后台设置Access-Control-Allow-Headers 放行content-disposition
  *
  * @param url 下载地址

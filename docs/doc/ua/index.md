@@ -4,7 +4,7 @@ title: Ua
 
 # 快速上手
 
-```tsx
+```tsx | pure
 import React from 'react';
 import { ua, satisfies } from '@seasonjs/tools';
 

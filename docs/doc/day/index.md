@@ -6,7 +6,7 @@ title: Day
 
 ### 快速上手
 
-```tsx
+```tsx | pure
 import React from 'react';
 import {
   somedayStart,

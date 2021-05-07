@@ -2,7 +2,23 @@
 title: 第三方库
 ---
 
-**导出自@umijs/utils** 值得注意的是：如果有安装 umijs 即可有两种使用方式从本工具导出，或从@umijs/utils 导出均可
+在安装 umijs 时生效，
+
+```jsx
+import { utils } from 'umi';
+```
+
+如果无 umjs 可以独立安装
+
+```shell
+yarn add @umijs/utils -D
+```
+
+```js
+import xxx from '@umijs/utils';
+```
+
+@umijs/utils 中 **值得注意的是：导出的大部分包为 node 包，无法在浏览器使用**
 
 导出方法，详见 [@umijs/utils/src/index.ts](https://github.com/umijs/umi/blob/master/packages/utils/src/index.ts)。
 包含外部库：
@@ -85,8 +101,6 @@ export default () => {
 更安全的 json 序列化方案
 
 ```tsx
-import React from 'react';
-import { useForm } from 'react-hook-form';
 import { querystring } from '@seasonjs/tools';
 
 export default () => {

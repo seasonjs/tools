@@ -6,7 +6,7 @@ title: Async-queue
 
 ### 快速上手
 
-```ts
+```tsx | pure
 import React from 'react';
 import { AsyncQueue } from '@seasonjs/tools';
 

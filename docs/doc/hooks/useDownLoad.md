@@ -1,12 +1,12 @@
 ---
-title: useDownLoad-下载
+title: useDownLoad
 ---
 
 ## 常用下载方法
 
 ### 快速上手
 
-```tsx
+```tsx | pure
 import React from 'react';
 import { useDownLoad } from '@seasonjs/tools';
 

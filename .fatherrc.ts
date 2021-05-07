@@ -1,5 +1,7 @@
 export default {
+  target: 'node',
   esm: 'rollup',
-  cjs: { type: 'babel', lazy: true },
+  cjs: 'rollup',
+  disableTypeCheck: false,
   // extraBabelPlugins: ['lodash'],
 };

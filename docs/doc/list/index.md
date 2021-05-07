@@ -6,7 +6,7 @@ title: List
 
 ### 快速上手
 
-```tsx
+```tsx | pure
 import React from 'react';
 import { List } from '@seasonjs/tools';
 
