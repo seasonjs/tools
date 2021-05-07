@@ -1,5 +1,5 @@
 export default {
   esm: 'rollup',
-  cjs: 'rollup',
-  extraBabelPlugins: ['lodash'],
+  cjs: { type: 'babel', lazy: true },
+  // extraBabelPlugins: ['lodash'],
 };
