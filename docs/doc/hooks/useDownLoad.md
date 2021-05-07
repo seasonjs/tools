@@ -6,7 +6,7 @@ title: useDownLoad-下载
 
 ### 快速上手
 
-```tsx
+```tsx | pure
 import React from 'react';
 import { useDownLoad } from '@seasonjs/tools';
 

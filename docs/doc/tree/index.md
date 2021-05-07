@@ -6,7 +6,7 @@ title: Tree
 
 遍历
 
-```tsx
+```tsx | pure
 import React from 'react';
 import { travelTree } from '@seasonjs/tools';
 

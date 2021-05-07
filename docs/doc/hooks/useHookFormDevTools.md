@@ -6,7 +6,7 @@ title: useFormDevTool react-hook-form debug工具封装
 
 ### 快速上手
 
-```tsx
+```tsx | pure
 import React from 'react';
 import { useFormDevTool } from '@seasonjs/tools';
 import { useForm } from 'react-hook-form';

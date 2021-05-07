@@ -6,7 +6,7 @@ title: Array
 
 ### 快速上手
 
-```tsx
+```tsx | pure
 import React from 'react';
 import { insert } from '@seasonjs/tools';
 

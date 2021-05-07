@@ -4,6 +4,7 @@ export default defineConfig({
   base: '/tools',
   publicPath: '/tools/',
   exportStatic: {}, // 将所有路由输出为 HTML 目录结构，以免刷新页面时 404
+  ssr: {},
   title: 'seasonjs/tools',
   mode: 'site',
   navs: [
@@ -15,6 +16,18 @@ export default defineConfig({
     'https://raw.githubusercontent.com/seasonjs/tools/main/docs/public/icon.svg',
   favicon:
     'https://raw.githubusercontent.com/seasonjs/tools/main/docs/public/icon.svg',
+  // extraBabelPlugins: [
+  //   [
+  //     'import',
+  //     {
+  //       libraryName: '@seasonjs/tools',
+  //       libraryDirectory: 'dist',
+  //       // customStyleName: name => {
+  //       //   return `./style/index.less`; // 注意：这里 ./ 不可省略
+  //       // },
+  //     },
+  //     // '@seasonjs/tools',
+  //   ],]
   // extraBabelPlugins: [
   //     [
   //         'import',

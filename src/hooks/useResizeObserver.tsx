@@ -20,7 +20,7 @@ export function useResizeObserver<T extends Element>(
   const [size, setSize] = useState<Size>({} as any);
   useEffect(() => {
     let requestAnimationFrameId: number | null = null;
-    if (ref.current) {
+    if (ref?.current) {
       const resizeObserver = new ResizeObserver(
         (entries: ResizeObserverEntry[]) => {
           requestAnimationFrameId = requestAnimationFrame(() => {
