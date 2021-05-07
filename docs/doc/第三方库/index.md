@@ -32,6 +32,7 @@ title: 第三方库
 - `parser` : 导出自 `@babel/parser`, 解析代码生成 AST 抽象语法树。
 - `traverse` : 导出自 `@babel/traverse`, 对 AST 节点进行递归遍历。
 - `t` : 导出自 `@babel/types`, 用于 AST 节点的 Lodash 式工具库。它包含了构造、验证以及变换 AST 节点的方法。 该工具库包含考虑周到的工具方法，对编写处理 AST 逻辑非常有用。 包含内部方法
+  内部库
 - `isBrowser`, 判断是否在浏览器环境。
 - `isWindows`, 判断当前是否是 windows 系统。
 - `isSSR`, whether SSR success in client。
