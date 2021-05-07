@@ -6,17 +6,30 @@ title: Ua
 
 ```tsx
 import React from 'react';
-import { ua } from '@seasonjs/tools';
+import { ua, satisfies } from '@seasonjs/tools';
 
 export default () => (
   <div>
-    <p>machine:{ua.browser.machine}</p>
-    <p>name:{ua.browser.name}</p>
-    <p>version: {ua.browser.version}</p>
-    <p>engineVer:{ua.browser.engineVer}</p>
-    <p>engine:{ua.browser.engine}</p>
-    <p>machineSys:{ua.browser.machineSys}</p>
-    <p>totalInfo:{ua.browser.totalInfo}</p>
+    <p> {JSON.stringify(ua)}</p>
+    <p>
+      {satisfies({
+        // declare browsers per OS
+        windows: {
+          'internet explorer': '>10',
+        },
+        macos: {
+          safari: '>10.1',
+        },
+        // or in general
+        chrome: '~20.1.1432',
+        firefox: '>31',
+        opera: '>=22',
+        // per platform (mobile, desktop or tablet)
+        mobile: {
+          safari: '>=9',
+        },
+      })?.toString()}
+    </p>
   </div>
 );
 ```

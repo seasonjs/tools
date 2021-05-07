@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { DevTool } from '@hookform/devtools';
 
+/**
+ * @description 针对hookform 的一层封装
+ * @param control useForm 暴露的control
+ * @return DevTool 返回jsx
+ */
 export const useFormDevTool = (control: any) => {
   const Modal = React.memo(({ children }) => {
     let domEl = null;
