@@ -22,6 +22,7 @@ export * from './list';
 export * from './dom/defaultPassiveEvents';
 export * from './hooks/useHeightLight';
 export * from './hooks';
+export * from './mobx';
 // export * from '@umijs/utils';
 // export {
 //   // spawn,
