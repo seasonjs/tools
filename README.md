@@ -7,7 +7,6 @@
 [![dumi](https://img.shields.io/badge/docs%20by-dumi-blue)](https://github.com/umijs/dumi)
 <a href="https://www.npmjs.com/package/@seasonjs/tools"><img src="https://img.shields.io/npm/v/@seasonjs/tools.svg?sanitize=true" alt="Version"></a>
 <a href="https://www.npmjs.com/package/@seasonjs/tools"><img src="https://img.shields.io/npm/l/@seasonjs/tools.svg?sanitize=true" alt="License"></a>
-[![Node.js Package](https://github.com/seasonjs/tools/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/seasonjs/tools/actions/workflows/npm-publish.yml)
 
 </p>
 
