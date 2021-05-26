@@ -18,7 +18,7 @@ export * from './array';
 export * from './day';
 export * from './dom/insertStyle';
 export * from './hoc/forwardRefStatics';
-export * from './list';
+// export * from './list';
 export * from './dom/defaultPassiveEvents';
 export * from './hooks/useHeightLight';
 export * from './hooks';

@@ -23,7 +23,7 @@ export const useFormDevTool = (control: any) => {
   const Tool = () => (
     <>
       <Modal>
-        <DevTool control={control} />
+        <DevTool control={control} placement={'top-right'} />
       </Modal>
     </>
   );
