@@ -3,6 +3,8 @@ import 'reflect-metadata';
 import localforage from 'localforage';
 import { merge } from 'lodash';
 
+//参照代码 https://github.com/mobxjs/mobx/discussions/2936
+
 type storageType = 'localStorage' | 'webSQL';
 
 configure({ safeDescriptors: false, observableRequiresReaction: false });
