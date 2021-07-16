@@ -6,6 +6,8 @@ title: Async-queue
 
 ### 快速上手
 
+非常轻量的基于 Promise 的异步队列
+
 ```tsx | pure
 import React from 'react';
 import { AsyncQueue } from '@seasonjs/tools';
