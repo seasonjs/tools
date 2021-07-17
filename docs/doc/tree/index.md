@@ -4,7 +4,7 @@ title: Tree
 
 # 树
 
-遍历
+遍历树
 
 ```tsx | pure
 import React from 'react';

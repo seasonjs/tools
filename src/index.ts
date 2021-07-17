@@ -18,59 +18,6 @@ export * from './array';
 export * from './day';
 export * from './dom/insertStyle';
 export * from './hoc/forwardRefStatics';
-// export * from './list';
 export * from './dom/defaultPassiveEvents';
-export * from './hooks/useHeightLight';
 export * from './hooks';
 export * from './mobx';
-// export * from '@umijs/utils';
-// export {
-//   // spawn,
-//   semver,
-//   address,
-//   chalk,
-//   cheerio,
-//   clipboardy,
-//   chokidar,
-//   createDebug,
-//   Debugger,
-//   deepmerge,
-//   execa,
-//   lodash,
-//   glob,
-//   got,
-//   portfinder,
-//   pkgUp,
-//   resolve,
-//   yargs,
-//   mkdirp,
-//   Mustache,
-//   rimraf,
-//   yParser,
-//   t,
-//   parser,
-//   traverse,
-//   // signale,
-//   compatESModuleRequire,
-//   mergeConfig,
-//   isLernaPackage,
-//   getFile,
-//   winPath,
-//   winEOL,
-//   isWindows,
-//   parseRequireDeps,
-//   BabelRegister,
-//   Generator,
-//   randomColor,
-//   delay,
-//   cleanRequireCache,
-//   ArgsType,
-//   PartialKeys,
-//   PartialProps,
-//   NodeEnv,
-//   Omit,
-//   isBrowser,
-//   isSSR,
-//   getWindowInitialProps,
-//   routeToChunkName,
-// } from '@umijs/utils';

@@ -1,4 +1,10 @@
 // https://blog.csdn.net/qq_29722281/article/details/96979042?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.control
+/**
+ * @description 此处代码仅供参考，可以使用实际可以loadsh的包，不作为导出
+ * @param target
+ * @param source
+ */
+
 function copyProperties(target: any, source: Record<string, any>) {
   // eslint-disable-next-line  no-restricted-syntax
   for (const key of Reflect.ownKeys(source)) {
@@ -8,6 +14,7 @@ function copyProperties(target: any, source: Record<string, any>) {
     }
   }
 }
+
 /**
  * 使用参照博客
  * 多继承方法
@@ -22,6 +29,7 @@ function mixin(...mixins: any[]): any {
       }
     }
   }
+
   // eslint-disable-next-line  no-restricted-syntax
   for (const m of mixins) {
     copyProperties(Mix, m); // 拷贝静态属性
