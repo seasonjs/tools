@@ -26,7 +26,7 @@ yarn add @seasonjs/tools
 
 ## 使用说明
 
-https://seasonjs.github.io/tools/
+https://season.js.org
 
 ## 项目维护
 
