@@ -4,7 +4,7 @@ English | [简体中文](./README.zh-CN.md)
 
 <img src="./docs/public/icon.svg" width="200">
 
-# @seasonjs/tool
+# @seasonjs/tools
 
 
 react 通用工具 
