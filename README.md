@@ -1,7 +1,12 @@
-# tools
+[English](./README.md) | 简体中文
 
-常用工具类
 
+<img src="./docs/public/icon.svg" width="200">
+
+# @seasonjs/tool
+
+A react common tool  
+  
 <p align="center">
 
 [![dumi](https://img.shields.io/badge/docs%20by-dumi-blue)](https://github.com/umijs/dumi)
@@ -10,7 +15,13 @@
 
 </p>
 
-## 安装
+## Overview
+
+Next generation toolset package
+
+
+
+## Install
 
 - npm:
 
@@ -24,44 +35,111 @@ npm install @seasonjs/tools
 yarn add @seasonjs/tools
 ```
 
-## 使用说明
+## Usage
 
 https://season.js.org
 
-## 项目维护
+## Support
 
-- 定期升级第三方依赖
+Support all modern browsers eg. Chrome, Firefox, Edge, Safari.
 
-```shell
+## Development
+
+
+#### Frontend File Structure
+```
+root
+│
+└───docks     dumi doc 
+│   
+└───src       code space
+    │   
+    └───array 
+    │   
+    └───asyncQyeue
+    │   
+    └───day
+    │   
+    └───deepClone  not export to user yet,just an record.
+    │   
+    └───dom      
+    │   
+    └───hoc        react hoc
+    │   
+    └───hooks      react hooks
+    │   
+    └───list          
+    │   
+    └───mixin      not export to user yet,just an record.
+    │   
+    └───mobx
+    │   
+    └───reg
+    │   
+    └───store
+    │   
+    └───thread
+    │   
+    └───tree
+    │   
+    └───typeCheck  not export to user yet,just an record.
+    │   
+    └───ua
+    │   
+    └───upload not export to user yet,just an record.
+│   
+└───index.ts  Entry file
+```
+
+### Develop tips & Contribute guide
+
+- update npm packages
+
+```bash
 yarn upgrade-interactive --latest
 ```
 
-- 安装依赖,
+- install all
 
 ```bash
 $ npm i
 ```
 
-启动开发服务,
+- start
 
 ```bash
 $ npm start
 ```
 
-打包文档,
+- build doc
 
 ```bash
 $ npm run docs:build
 ```
 
-打包代码
+- build packages
 
 ```bash
 $ npm run build
 ```
 
-git(必须区分大小写，因为 js 的 import 大小写敏感)
+- git setting
+ 
+You must be case sensitive because JS import is case sensitive
 
 ```
 git config core.ignorecase false
 ```
+## Contributors
+
+[@Cyberhan123](https://github.com/cyberhan123)
+[@gonglixin980926](https://github.com/gonglixin980926)
+
+
+## Acknowledgements
+
+thanks mobx, lodash, umijs etc.
+
+## License
+[MIT](LICENSE)
+Copyright © 2021, seasonjs
