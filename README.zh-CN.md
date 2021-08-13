@@ -1,5 +1,5 @@
 
-[English] (./README.md) | 简体中文
+[English](./README.md) | 简体中文
 
 
 <img src="./docs/public/icon.svg" width="200">
