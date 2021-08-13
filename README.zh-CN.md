@@ -6,9 +6,6 @@ English | [简体中文](./README.zh-CN.md)
 
 # @seasonjs/tools
 
-
-react 通用工具 
-  
 <p align="center">
 
 [![dumi](https://img.shields.io/badge/docs%20by-dumi-blue)](https://github.com/umijs/dumi)
