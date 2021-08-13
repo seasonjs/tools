@@ -4,8 +4,6 @@ English | [简体中文](./README.zh-CN.md)
 <img src="./docs/public/icon.svg" width="200">
 
 # @seasonjs/tools
-
-A react common tool  
   
 <p align="center">
 
