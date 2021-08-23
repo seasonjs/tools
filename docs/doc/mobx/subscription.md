@@ -10,10 +10,11 @@ title: subscription
 import React from 'react';
 import { subscription } from '@seasonjs/tools';
 import { observer } from 'mobx-react-lite';
+import { observable } from 'mobx';
 
-const obj = {
+const obj = observable({
   a: 1,
-};
+});
 export default observer(() => {
   subscription(
     obj,
