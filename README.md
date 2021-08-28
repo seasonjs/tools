@@ -1,10 +1,9 @@
 English | [简体中文](./README.zh-CN.md)
 
-
-<img src="./docs/public/icon.svg" width="200">
+<img src="./docs/public/icon.svg" width="150">
 
 # @seasonjs/tools
-  
+
 <p align="center">
 
 [![dumi](https://img.shields.io/badge/docs%20by-dumi-blue)](https://github.com/umijs/dumi)
@@ -15,9 +14,7 @@ English | [简体中文](./README.zh-CN.md)
 
 ## Overview
 
-Next generation toolset package
-
-
+> Next generation toolset package
 
 ## Install
 
@@ -43,49 +40,49 @@ Support all modern browsers eg. Chrome, Firefox, Edge, Safari.
 
 ## Development
 
-
 #### Frontend File Structure
+
 ```
 root
 │
-└───docks     dumi doc 
-│   
+└───docks     dumi doc
+│
 └───src       code space
-    │   
-    └───array 
-    │   
+    │
+    └───array
+    │
     └───asyncQyeue
-    │   
+    │
     └───day
-    │   
+    │
     └───deepClone  not export to user yet,just an record.
-    │   
-    └───dom      
-    │   
+    │
+    └───dom
+    │
     └───hoc        react hoc
-    │   
+    │
     └───hooks      react hooks
-    │   
-    └───list          
-    │   
+    │
+    └───list
+    │
     └───mixin      not export to user yet,just an record.
-    │   
+    │
     └───mobx
-    │   
+    │
     └───reg
-    │   
+    │
     └───store
-    │   
+    │
     └───thread
-    │   
+    │
     └───tree
-    │   
+    │
     └───typeCheck  not export to user yet,just an record.
-    │   
+    │
     └───ua
-    │   
+    │
     └───upload not export to user yet,just an record.
-│   
+│
 └───index.ts  Entry file
 ```
 
@@ -100,44 +97,45 @@ yarn upgrade-interactive --latest
 - install all
 
 ```bash
-$ npm i
+$ yarn i
 ```
 
 - start
 
 ```bash
-$ npm start
+$ yarn start
 ```
 
 - build doc
 
 ```bash
-$ npm run docs:build
+$ yarn run docs:build
 ```
 
 - build packages
 
 ```bash
-$ npm run build
+$ yarn run build
 ```
 
 - git setting
- 
-You must be case sensitive because JS import is case sensitive
+
+You must be `case-sensitive` because JS import is `case-sensitive`
 
 ```
 git config core.ignorecase false
 ```
+
 ## Contributors
 
 [@Cyberhan123](https://github.com/cyberhan123)
 [@gonglixin980926](https://github.com/gonglixin980926)
-
 
 ## Acknowledgements
 
 thanks mobx, lodash, umijs etc.
 
 ## License
+
 [MIT](LICENSE)
 Copyright © 2021, seasonjs

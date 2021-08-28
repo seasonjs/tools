@@ -1,8 +1,6 @@
-
 [English](./README.md) | 简体中文
 
-
-<img src="./docs/public/icon.svg" width="200">
+<img src="./docs/public/icon.svg" width="150">
 
 # @seasonjs/tools
 
@@ -16,8 +14,7 @@
 
 ## 概览
 
-下一代工具合集
-
+> 下一代工具合集
 
 ## 安装
 
@@ -43,49 +40,49 @@ https://season.js.org
 
 ## 开发
 
-
 #### 项目结构
+
 ```
 root
 │
 └───docks     dumi 文档
-│   
+│
 └───src       code space
-    │   
-    └───array 
-    │   
+    │
+    └───array
+    │
     └───asyncQyeue
-    │   
+    │
     └───day
-    │   
+    │
     └───deepClone  未被导出给用户，仅做记录
-    │   
-    └───dom      
-    │   
+    │
+    └───dom
+    │
     └───hoc        react hoc
-    │   
+    │
     └───hooks      react hooks
-    │   
-    └───list          
-    │   
+    │
+    └───list
+    │
     └───mixin      未被导出给用户，仅做记录
-    │   
+    │
     └───mobx
-    │   
+    │
     └───reg
-    │   
+    │
     └───store
-    │   
+    │
     └───thread
-    │   
+    │
     └───tree
-    │   
+    │
     └───typeCheck  未被导出给用户，仅做记录
-    │   
+    │
     └───ua
-    │   
+    │
     └───upload     未被导出给用户，仅做记录
-│   
+│
 └───index.ts  Entry file
 ```
 
@@ -100,39 +97,39 @@ yarn upgrade-interactive --latest
 - 安装依赖
 
 ```bash
-$ npm i
+$ yarn i
 ```
 
 - 启动开发服务
 
 ```bash
-$ npm start
+$ yarn start
 ```
 
 - 构建文档
 
 ```bash
-$ npm run docs:build
+$ yarn run docs:build
 ```
 
 - 构建包
 
 ```bash
-$ npm run build
+$ yarn run build
 ```
 
-- git设置
- 
+- git 设置
+
 You must be case sensitive because JS import is case sensitive
 
 ```
 git config core.ignorecase false
 ```
+
 ## 贡献者
 
 [@Cyberhan123](https://github.com/cyberhan123)
 [@gonglixin980926](https://github.com/gonglixin980926)
-
 
 ## 感谢
 
