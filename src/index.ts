@@ -21,3 +21,4 @@ export * from './hoc/forwardRefStatics';
 export * from './dom/defaultPassiveEvents';
 export * from './hooks';
 export * from './mobx';
+export * from './color';
