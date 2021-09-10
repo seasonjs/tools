@@ -39,7 +39,6 @@
     "npm": "<7"
   },
   "dependencies": {
-    "@flowjs/flow.js": "^2.14.1",
     "@hookform/devtools": "^3.0.2",
     "ahooks": "^2.10.2",
     "bowser": "^2.11.0",
@@ -61,7 +60,8 @@
     "ahooks": "^2.10.2",
     "mobx": "^6.3.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.4.2"
   },
   "devDependencies": {
     "@types/flowjs": "^2.13.4",
