@@ -1,4 +1,4 @@
-English | [简体中文](./README.zh-CN.md)
+[English](./README.md) | 简体中文
 
 <img src="./docs/public/icon.svg" width="150">
 
@@ -12,11 +12,11 @@ English | [简体中文](./README.zh-CN.md)
 
 </p>
 
-## Overview
+## 概览
 
-> Next generation toolset package
+> 下一代工具合集
 
-## Install
+## 安装
 
 - npm:
 
@@ -30,22 +30,22 @@ npm install @seasonjs/tools
 yarn add @seasonjs/tools
 ```
 
-## Usage
+## 使用
 
 https://season.js.org
 
-## Support
+## 支持
 
-Support all modern browsers eg. Chrome, Firefox, Edge, Safari.
+所有现代浏览器， Chrome, Firefox, Edge, Safari。
 
-## Development
+## 开发
 
-#### Frontend File Structure
+#### 项目结构
 
 ```
 root
 │
-└───docks     dumi doc
+└───docks     dumi 文档
 │
 └───src       code space
     │
@@ -55,7 +55,7 @@ root
     │
     └───day
     │
-    └───deepClone  not export to user yet,just an record.
+    └───deepClone  未被导出给用户，仅做记录
     │
     └───dom
     │
@@ -65,7 +65,7 @@ root
     │
     └───list
     │
-    └───mixin      not export to user yet,just an record.
+    └───mixin      未被导出给用户，仅做记录
     │
     └───mobx
     │
@@ -77,63 +77,63 @@ root
     │
     └───tree
     │
-    └───typeCheck  not export to user yet,just an record.
+    └───typeCheck  未被导出给用户，仅做记录
     │
     └───ua
     │
-    └───upload not export to user yet,just an record.
+    └───upload     未被导出给用户，仅做记录
 │
 └───index.ts  Entry file
 ```
 
-### Develop tips & Contribute guide
+### 开发提示 & 贡献指南
 
-- update npm packages
+- 升级包
 
 ```bash
 yarn upgrade-interactive --latest
 ```
 
-- install all
+- 安装依赖
 
 ```bash
 $ yarn i
 ```
 
-- start
+- 启动开发服务
 
 ```bash
 $ yarn start
 ```
 
-- build doc
+- 构建文档
 
 ```bash
 $ yarn run docs:build
 ```
 
-- build packages
+- 构建包
 
 ```bash
 $ yarn run build
 ```
 
-- git setting
+- git 设置
 
-You must be `case-sensitive` because JS import is `case-sensitive`
+You must be case sensitive because JS import is case sensitive
 
 ```
 git config core.ignorecase false
 ```
 
-## Contributors
+## 贡献者
 
 [@Cyberhan123](https://github.com/cyberhan123)
 [@gonglixin980926](https://github.com/gonglixin980926)
 
-## Acknowledgements
+## 感谢
 
-thanks mobx, lodash, umijs etc.
+感谢 mobx, lodash, umijs 等.
 
 ## License
 
