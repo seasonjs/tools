@@ -1,6 +1,6 @@
 [English](./README.md) | 简体中文
 
-<img src="./docs/public/icon.svg" width="150">
+<img src="./public/icon.svg" width="150" alt=''>
 
 # @seasonjs/tools
 

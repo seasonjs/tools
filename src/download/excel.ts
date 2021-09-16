@@ -1,5 +1,12 @@
 import { saveAs } from 'file-saver';
-import type { CellObject, Range, WorkBook, WorkSheet, WSKeys } from 'xlsx';
+import type {
+  BookType,
+  CellObject,
+  Range,
+  WorkBook,
+  WorkSheet,
+  WSKeys,
+} from 'xlsx';
 import XLSX from 'xlsx';
 
 /**
@@ -49,7 +56,7 @@ function arrayToSheet(
       else if (typeof cell.v === 'boolean') cell.t = 'b';
       else if (cell.v instanceof Date) {
         cell.t = 'n';
-        cell.z = XLSX.SSF._Table[14];
+        // cell.z = XLSX.SSF._Table[14];
         // cell.v = cell.v;
       } else cell.t = 's';
       ws[ca] = cell;
@@ -59,10 +66,10 @@ function arrayToSheet(
   return ws;
 }
 
-function s2ab(s) {
-  const buf = new ArrayBuffer(s.length);
+function s2ab(str: string) {
+  const buf = new ArrayBuffer(str.length);
   const view = new Uint8Array(buf);
-  for (let i = 0; i !== s.length; ++i) view[i] = s.charCodeAt(i) & 0xff;
+  for (let i = 0; i !== str.length; ++i) view[i] = str.charCodeAt(i) & 0xff;
   return buf;
 }
 
@@ -75,30 +82,41 @@ function formatSheet(
   if (merges.length > 0) {
     if (!ws['!merges']) ws['!merges'] = [];
     merges.forEach((item) => {
-      ws['!merges'].push(XLSX.utils.decode_range(item));
+      ws['!merges']?.push?.(XLSX.utils.decode_range(item));
     });
   }
 
   if (autoWidth) {
     /* 设置worksheet每列的最大宽度 */
     const colWidth = data.map((row) =>
-      row.map((val) => {
-        /* 先判断是否为null/undefined */
-        if (val == null) {
+      row.map(
+        (
+          val: {
+            toString: () => {
+              (): any;
+              new (): any;
+              charCodeAt: { (arg0: number): number; new (): any };
+              length: number;
+            };
+          } | null,
+        ) => {
+          /* 先判断是否为null/undefined */
+          if (val == null) {
+            return {
+              wch: 10,
+            };
+          }
+          if (val.toString().charCodeAt(0) > 255) {
+            /* 再判断是否为中文 */
+            return {
+              wch: val.toString().length * 2,
+            };
+          }
           return {
-            wch: 10,
+            wch: val.toString().length,
           };
-        }
-        if (val.toString().charCodeAt(0) > 255) {
-          /* 再判断是否为中文 */
-          return {
-            wch: val.toString().length * 2,
-          };
-        }
-        return {
-          wch: val.toString().length,
-        };
-      }),
+        },
+      ),
     );
     /* 以第一行为初始值 */
     const result = colWidth[0];
@@ -120,7 +138,7 @@ type exportExcelProps = {
   filename?: string;
   merges: any;
   autoWidth: boolean;
-  bookType?: string;
+  bookType?: BookType;
 };
 
 /**
