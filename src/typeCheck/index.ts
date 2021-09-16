@@ -6,7 +6,7 @@
  * @link3 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
  */
 
-//基本类型
+// 基本类型
 type TYPE =
   | 'number'
   | 'string'
@@ -15,7 +15,7 @@ type TYPE =
   | 'undefined'
   | 'boolean'
   | 'bigint'
-  //常见的引用类型
+  // 常见的引用类型
   | 'Array'
   | 'Date'
   | 'Element'
@@ -24,12 +24,12 @@ type TYPE =
   | 'RegExp'
   | 'Set'
   | 'Map'
-  //根据Lodash/TypeScript扩展的类型
+  // 根据Lodash/TypeScript扩展的类型
   // 类arguments对象
   // | 'Arguments'
   //
   | 'NumberLike'
-  //nil为 null,undefined,void的合集
+  // nil为 null,undefined,void的合集
   | 'nil'
   | 'ArrayLike'
   | 'ArrayBuffer'
@@ -62,7 +62,7 @@ export function isNumberPrimitive(value: any) {
  * @param value
  */
 export function isNumberObject(value: any) {
-  return isObjectLike(value) && getType(value) == '[object Number]';
+  return isObjectLike(value) && getType(value) === '[object Number]';
 }
 
 /**
@@ -90,7 +90,7 @@ export function isStringObject(value: any) {
   return (
     isObjectLike(value) &&
     !isArray(value) &&
-    getType(value) == '[object String]'
+    getType(value) === '[object String]'
   );
 }
 
@@ -117,7 +117,7 @@ function isSymbolPrimitive(value: any) {
  * @param value
  */
 function isSymbolObject(value: any) {
-  return isObjectLike(value) && getType(value) == '[object Symbol]';
+  return isObjectLike(value) && getType(value) === '[object Symbol]';
 }
 
 /**
@@ -167,7 +167,7 @@ export function isBooleanPrimitive(value: any) {
  * @param value
  */
 export function isBooleanObject(value: any) {
-  return isObjectLike(value) && getType(value) == '[object Boolean]';
+  return isObjectLike(value) && getType(value) === '[object Boolean]';
 }
 
 /**
@@ -191,7 +191,7 @@ export function isBigIntPrimitive(value: any) {
  * @param value
  */
 export function isBigIntObject(value: any) {
-  return isObjectLike(value) && getType(value) == '[object BigInt]';
+  return isObjectLike(value) && getType(value) === '[object BigInt]';
 }
 
 /**
@@ -217,12 +217,12 @@ export function isArray(value: any) {
  * @param value
  */
 export function isArrayLike(value: any) {
-  const length = value.length;
+  const { length } = value;
   return (
     typeof value !== 'function' &&
     Number.isFinite(length) &&
     length > -1 &&
-    length % 1 == 0
+    length % 1 === 0
   );
 }
 
@@ -253,7 +253,7 @@ export function isPlainObject(value: any) {
   return typeof value === 'object' && value !== null;
 }
 export function isDate(value: any) {
-  return isObjectLike(value) && getType(value) == '[object Date]';
+  return isObjectLike(value) && getType(value) === '[object Date]';
 }
 
 /**
@@ -269,8 +269,8 @@ export function isFunction(value: any) {
  * 因为它需要将所有条件检查一遍 :) ,如果你需要全检查一遍的话可以调用
  * @param value
  */
-export function assert(value: any): Array<TYPE> {
-  const typeAssertArray: Array<TYPE> = [];
+export function assert(value: any): TYPE[] {
+  const typeAssertArray: TYPE[] = [];
 
   // 最后如果断言数组长度为0则返回unknown,断言条件下基本不可能出现
   if (typeAssertArray.length === 0) {
@@ -281,12 +281,11 @@ export function assert(value: any): Array<TYPE> {
 
 class CheckType {
   constructor() {
-    //如果没有入参则这说明这个需要返回实例，如果有入参则需要返回类型
+    // 如果没有入参则这说明这个需要返回实例，如果有入参则需要返回类型
     if (arguments?.length <= 0 && !(this instanceof CheckType)) {
       return new CheckType();
-    } else {
-      return assert(arguments[0]);
     }
+    return assert(arguments[0]);
   }
 }
 

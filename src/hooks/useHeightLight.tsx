@@ -1,4 +1,5 @@
-import React, { ReactElement } from 'react';
+import type { ReactElement } from 'react';
+import React from 'react';
 import { travelTree } from '@/tree';
 
 /**
@@ -13,7 +14,7 @@ export function keySingleRender(
   // 特别注意！！！可能会出现react 对象
   if (key && text && typeof text === 'string' && typeof key === 'string') {
     const reg = new RegExp(key, 'gi');
-    const result = text.replace(reg, function (txt) {
+    const result = text.replace(reg, (txt) => {
       return `<Fragment style='color:#0076ff'>${txt}</Fragment>`;
     });
     // 特别要注意这块可能会出现非法字符
@@ -48,6 +49,7 @@ export const useHeightLight = (
     (item) => {
       if (keyword) {
         const splitWord = keySingleRender(item.content, keyword);
+        //eslint-disable-next-line  no-param-reassign
         item.content = <>{splitWord}</>;
       }
       if (callback) {

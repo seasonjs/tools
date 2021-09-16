@@ -1,12 +1,7 @@
 import { saveAs } from 'file-saver';
-import XLSX, { CellObject, Range, WorkBook, WorkSheet, WSKeys } from 'xlsx';
+import type { CellObject, Range, WorkBook, WorkSheet, WSKeys } from 'xlsx';
+import XLSX from 'xlsx';
 
-// export function dateNum(v: Date, date1904?: boolean) {
-//   if (date1904)
-//     v += 1462;
-//   let epoch = Date.parse(v);
-//   return (epoch - new Date(Date.UTC(1899, 11, 30))) / (24 * 60 * 60 * 1000);
-// }
 /**
  * 格式化数据 主要是处理转换过程的类型，目前只会导出一张表
  * @param data
@@ -16,16 +11,16 @@ function arrayToSheet(
   data: WorkSheet,
   option?: { maxRange?: number },
 ): WorkSheet {
-  let ws: WorkSheet = {};
-  let range: Range = {
-    //开始行
+  const ws: WorkSheet = {};
+  const range: Range = {
+    // 开始行
     s: {
-      //最大列数默认最大10w条
+      // 最大列数默认最大10w条
       c: option?.maxRange ?? 100_000,
-      //最大行数默认最大10w条
+      // 最大行数默认最大10w条
       r: option?.maxRange ?? 100_000,
     },
-    //结束行
+    // 结束行
     e: {
       c: 0,
       r: 0,
@@ -39,13 +34,13 @@ function arrayToSheet(
       if (range.s.c > C) range.s.c = C;
       if (range.e.r < R) range.e.r = R;
       if (range.e.c < C) range.e.c = C;
-      let cell: CellObject | WSKeys | any = {
+      const cell: CellObject | WSKeys | any = {
         v: data[R][C],
       };
-      //如果为 nil 则不需要处理
+      // 如果为 nil 则不需要处理
       if (cell.v == null) continue;
       // 获取表格encode地址
-      let ca = XLSX.utils.encode_cell({
+      const ca = XLSX.utils.encode_cell({
         c: C,
         r: R,
       });
@@ -65,13 +60,18 @@ function arrayToSheet(
 }
 
 function s2ab(s) {
-  let buf = new ArrayBuffer(s.length);
-  let view = new Uint8Array(buf);
+  const buf = new ArrayBuffer(s.length);
+  const view = new Uint8Array(buf);
   for (let i = 0; i !== s.length; ++i) view[i] = s.charCodeAt(i) & 0xff;
   return buf;
 }
 
-function formatSheet(ws, data, merges, autoWidth) {
+function formatSheet(
+  ws: WorkSheet,
+  data: any[],
+  merges: any[],
+  autoWidth: boolean,
+) {
   if (merges.length > 0) {
     if (!ws['!merges']) ws['!merges'] = [];
     merges.forEach((item) => {
@@ -80,32 +80,32 @@ function formatSheet(ws, data, merges, autoWidth) {
   }
 
   if (autoWidth) {
-    /*设置worksheet每列的最大宽度*/
+    /* 设置worksheet每列的最大宽度 */
     const colWidth = data.map((row) =>
       row.map((val) => {
-        /*先判断是否为null/undefined*/
+        /* 先判断是否为null/undefined */
         if (val == null) {
           return {
             wch: 10,
           };
-        } else if (val.toString().charCodeAt(0) > 255) {
-        /*再判断是否为中文*/
+        }
+        if (val.toString().charCodeAt(0) > 255) {
+          /* 再判断是否为中文 */
           return {
             wch: val.toString().length * 2,
           };
-        } else {
-          return {
-            wch: val.toString().length,
-          };
         }
+        return {
+          wch: val.toString().length,
+        };
       }),
     );
-    /*以第一行为初始值*/
-    let result = colWidth[0];
+    /* 以第一行为初始值 */
+    const result = colWidth[0];
     for (let i = 1; i < colWidth.length; i++) {
       for (let j = 0; j < colWidth[i].length; j++) {
-        if (result[j]['wch'] < colWidth[i][j]['wch']) {
-          result[j]['wch'] = colWidth[i][j]['wch'];
+        if (result[j].wch < colWidth[i][j].wch) {
+          result[j].wch = colWidth[i][j].wch;
         }
       }
     }
@@ -115,8 +115,8 @@ function formatSheet(ws, data, merges, autoWidth) {
 }
 
 type exportExcelProps = {
-  header?: Array<any>;
-  data: Array<any>;
+  header?: any[];
+  data: any[];
   filename?: string;
   merges: any;
   autoWidth: boolean;
@@ -148,7 +148,7 @@ export function downLoadExcel(param: exportExcelProps) {
     if (header && header.length) {
       data.unshift(header);
     }
-    let ws_name = 'Sheet1';
+    const ws_name = 'Sheet1';
     let ws = arrayToSheet(data);
     ws = formatSheet(ws, data, merges, autoWidth ?? true);
     wb.SheetNames.push(ws_name);
@@ -169,7 +169,7 @@ export function downLoadExcel(param: exportExcelProps) {
   }
 
   const wbout = XLSX.write(wb, {
-    bookType: bookType,
+    bookType,
     bookSST: false,
     type: 'binary',
   });

@@ -20,7 +20,7 @@ function copyProperties(target: any, source: Record<string, any>) {
  * 多继承方法
  * @param mixins 要进行集成的对象数组
  */
-function mixin(...mixins: any[]): any {
+export function mixin(...mixins: any[]): any {
   class Mix {
     constructor(...ags: any) {
       // eslint-disable-next-line  no-restricted-syntax
@@ -37,5 +37,3 @@ function mixin(...mixins: any[]): any {
   }
   return Mix;
 }
-
-export default mixin;

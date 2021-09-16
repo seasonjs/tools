@@ -13,7 +13,7 @@
     "release": "npm run build && npm publish",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
-    "fix:eslint": "eslint ./src --fix --ext  .js,.jsx,.ts,.tsx",
+    "fix:eslint": "eslint ./src --fix --ext .ts,.tsx",
     "test:coverage": "umi-test --coverage"
   },
   "main": "dist/index.js",
@@ -46,7 +46,6 @@
     "file-saver": "^2.0.5",
     "hoist-non-react-statics": "^3.3.2",
     "localforage": "^1.10.0",
-    "lodash": "^4.17.21",
     "mobx": "^6.3.3",
     "mobx-react-lite": "^3.2.1",
     "nanoid": "^3.1.25",

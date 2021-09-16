@@ -7,12 +7,12 @@ import { computed } from 'mobx';
  * @param func 属性变化后，需要做的操作
  */
 export function subscription<T extends any[]>(
-  state: object,
+  state: any,
   depsFunc: (state: object) => T,
   func: (oldVal: T | undefined, newVal: T) => void,
 ) {
   const deps = computed(() => depsFunc(state));
-  const observeDispose = deps.observe_(({ oldValue, newValue }) => {
+  const _observeDispose = deps.observe_(({ oldValue, newValue }) => {
     if (oldValue !== newValue) {
       func(oldValue, newValue);
     }

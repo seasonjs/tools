@@ -1,9 +1,7 @@
 import { configure, runInAction } from 'mobx';
 import 'reflect-metadata';
 import localforage from 'localforage';
-import { merge } from 'lodash';
-
-//参照代码 https://github.com/mobxjs/mobx/discussions/2936
+// 参照代码 https://github.com/mobxjs/mobx/discussions/2936
 
 type storageType = 'localStorage' | 'webSQL';
 
@@ -40,14 +38,16 @@ export async function makePersistent<T extends Record<string, any>>(
   };
   // TODO: 需要增加sessionStorage
   if (option.storageSetting === 'localStorage') {
-    config = merge(config, {
+    config = {
+      ...config,
       driver: localforage.LOCALSTORAGE,
-    });
+    };
   }
   if (option.storageSetting === 'webSQL') {
-    config = merge(config, {
+    config = {
+      ...config,
       driver: localforage.WEBSQL,
-    });
+    };
   }
 
   const store = localforage.createInstance(config);
@@ -57,20 +57,17 @@ export async function makePersistent<T extends Record<string, any>>(
   );
   const object: Record<string, any> = {};
 
-  //这里需要等待key全取出来才可以进行之后的操作
+  // 这里需要等待key全取出来才可以进行之后的操作
   for (const key of keys) {
     try {
       object[key] = await store.getItem(key);
-      console.log(key, object[key]);
     } catch (e) {
-      console.warn('持久化解析出现问题：', e);
+      console.error('持久化解析出现问题：', e);
     }
   }
 
   runInAction(() => {
-    console.log(object.test, object['test']);
     for (const key of keys) {
-      // console.log(object, object[key], key, keys);
       if (object[key] != null) {
         Reflect.set(target, key, object[key]);
       }

@@ -1,4 +1,4 @@
-//copy from https://github.com/trekhleb/javascript-algorithms/blob/master/src/utils/comparator/Comparator.js
+// copy from https://github.com/trekhleb/javascript-algorithms/blob/master/src/utils/comparator/Comparator.js
 export default class Comparator {
   private compare: (a: any, b: any) => 0 | 1 | -1;
   /**
