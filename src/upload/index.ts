@@ -33,16 +33,19 @@ export interface UploadEventContext {
 }
 
 export interface UploadOption {
-  url: string; //文件地址
-  file: File; //文件对象
-  filename: string; //文件名
-  data?: Record<string, any>; //数据
-  headers?: Record<string, any>; //请求头
-  withCredentials?: boolean; //是否携带cookie
-  method?: string; //请求方法
-  onProgress?: (progress: ProgressInfo, context: UploadEventContext) => void; //进度回调
-  onSuccess?: (result: object | string, context: UploadEventContext) => void; //成功回调
-  onError?: (error: Error, context: UploadEventContext) => void; //错误回调
+  url: string; // 文件地址
+  file: File; // 文件对象
+  filename: string; // 文件名
+  data?: Record<string, any>; // 数据
+  headers?: Record<string, any>; // 请求头
+  withCredentials?: boolean; // 是否携带cookie
+  method?: string; // 请求方法
+  onProgress?: (progress: ProgressInfo, context: UploadEventContext) => void; // 进度回调
+  onSuccess?: (
+    result: Record<string, any> | string,
+    context: UploadEventContext,
+  ) => void; // 成功回调
+  onError?: (error: Error, context: UploadEventContext) => void; // 错误回调
 }
 
 export function upload({

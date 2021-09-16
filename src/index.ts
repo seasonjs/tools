@@ -1,6 +1,6 @@
-let a =
+const a =
   'background: #606060; color: #fff; border-radius: 3px 0 0 3px; padding: 3px;';
-let b =
+const b =
   'background: #1475B2; color: #fff; border-radius: 0 3px 3px 0; padding: 3px 3px 3px 6px;';
 const seasonToolsVersion = 'v1.0.0';
 // eslint-disable-next-line
@@ -21,3 +21,4 @@ export * from './hoc/forwardRefStatics';
 export * from './dom/defaultPassiveEvents';
 export * from './hooks';
 export * from './mobx';
+export * from './download';

@@ -14,7 +14,7 @@ footer: Open-source MIT Licensed | Copyright © 2019-present<br />Powered by sel
 $ npm i @seasonjs/tools
 ```
 
-无需担心安装包大小，支持 tree-sharking。
+无需担心安装包大小，支持 tree-sharking,注意：如果要支持 tree-sharking 请不要全量引入
 
 ## 反馈与共建
 

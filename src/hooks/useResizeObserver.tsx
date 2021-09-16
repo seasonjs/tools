@@ -37,7 +37,7 @@ export function useResizeObserver<T extends Element>(
       return () => resizeObserver.disconnect();
     }
     return () => {
-      //如果组件销毁需要释放 requestAnimation
+      // 如果组件销毁需要释放 requestAnimation
       if (requestAnimationFrameId) {
         cancelAnimationFrame(requestAnimationFrameId);
       }

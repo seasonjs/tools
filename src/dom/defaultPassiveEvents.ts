@@ -1,5 +1,6 @@
 // https://www.chromestatus.com/feature/5745543795965952
 // https://github.com/zzarcon/default-passive-events#readme
+/*eslint-disable*/
 export const eventListenerOptionsSupported = () => {
   let supported = false;
 
@@ -57,8 +58,8 @@ const getWritableOptions = (
 
   return passiveDescriptor &&
     passiveDescriptor.writable !== true &&
-    passiveDescriptor.set === undefined
-    ? Object.assign({}, options)
+    passiveDescriptor.set === undefined // @ts-ignore
+    ? { ...options }
     : options;
 };
 type superMethodProps = {

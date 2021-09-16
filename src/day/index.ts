@@ -1,9 +1,9 @@
-//某天开始0:0:0
+// 某天开始0:0:0
 export const somedayStart = (day?: Date) =>
   new Date(
     new Date(new Date(day ?? new Date()).toLocaleDateString()).getTime(),
   );
-//某天结束
+// 某天结束
 export const somedayEnd = (day?: Date) =>
   new Date(
     new Date(new Date(day ?? new Date()).toLocaleDateString()).getTime() +
