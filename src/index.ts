@@ -12,7 +12,7 @@ export * as querystring from 'querystring';
 export * from './mixin';
 export * from './ua';
 export * from './reg';
-export * from './typeCheck';
+export * from './checkType';
 export * from './tree';
 export * from './array';
 export * from './day';

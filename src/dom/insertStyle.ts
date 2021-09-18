@@ -2,7 +2,7 @@ const prefix = 'dynamic-inserted-style-';
 
 /**
  * 全局插入css
- * */
+ */
 export function insertStyle(
   id: string,
   cssText: string,

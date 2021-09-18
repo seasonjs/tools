@@ -1,5 +1,5 @@
 ---
-title: 第三方库
+title: Others
 ---
 
 在安装 umijs 时生效，

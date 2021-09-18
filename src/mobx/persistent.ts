@@ -12,7 +12,7 @@ const PERSISTENT_METADATA_KEY = 'isPersistent';
  * @description mobx 持久化存储 使用方式需要作为最内层装饰器
  * @param target 注解默认调用当前属性值
  * @param propertyKey 注解默认调用当前key的name,暂时不支持自定义
- * TODO： 支持自定义配置
+ * @TODO： 支持自定义配置
  */
 export function persistent(target: any, propertyKey?: any) {
   Reflect.defineMetadata(PERSISTENT_METADATA_KEY, true, target, propertyKey);
