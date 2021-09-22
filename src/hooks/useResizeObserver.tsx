@@ -1,3 +1,4 @@
+import type { MutableRefObject } from 'react';
 import { useEffect, useState } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 
@@ -9,14 +10,9 @@ type Size = {
 /**
  * @description 获得当前对象的ResizeObserver的大小
  * @param ref
- * @return size 返回{
- *   width,
- *   height,
- * }
+ * @return { width, height } size
  */
-export function useResizeObserver<T extends Element>(
-  ref: React.MutableRefObject<T>,
-) {
+export function useResizeObserver<T extends Element>(ref: MutableRefObject<T>) {
   const [size, setSize] = useState<Size>({} as any);
   useEffect(() => {
     let requestAnimationFrameId: number | null = null;

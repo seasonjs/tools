@@ -6,37 +6,6 @@
  * @link3 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
  */
 
-// 基本类型
-type TYPE =
-  | 'number'
-  | 'string'
-  | 'symbol'
-  | 'null'
-  | 'undefined'
-  | 'boolean'
-  | 'bigint'
-  // 常见的引用类型
-  | 'Array'
-  | 'Date'
-  | 'Element'
-  | 'Function'
-  | 'Object'
-  | 'RegExp'
-  | 'Set'
-  | 'Map'
-  // 根据Lodash/TypeScript扩展的类型
-  // 类arguments对象
-  // | 'Arguments'
-  //
-  // nil为 null,undefined,void的合集
-  | 'Nil'
-  | 'ArrayLike'
-  | 'ArrayBuffer'
-  | 'Empty'
-  | 'NaN'
-  | 'ObjectLike'
-  | 'unknown';
-
 /**
  * @description.zh_CN 获取对象的toString类型
  * @param value
@@ -224,6 +193,13 @@ export function isArrayLike(value: any) {
     length % 1 === 0
   );
 }
+/**
+ * @description.zh_CN  检查 value 是否是 ArrayBuffer 对象。
+ * @param value
+ */
+export function isArrayBuffer(value: any) {
+  return isObjectLike(value) && getType(value) == '[object ArrayBuffer]';
+}
 
 /**
  * @description.zh_CN 检查 value 是否为 Object并且非null类型，
@@ -270,8 +246,8 @@ export function isPlainObject(value: any) {
 
 /**
  * @description.zh_CN 检查 value 是否是 DOM 元素。
- * @TODO 调研是否可以通过判断父类为Node来检测，可能会有兼容问题
  * @param value
+ * @TODO: 调研是否可以通过判断父类为Node来检测，可能会有兼容问题
  */
 export function isElement(value: any) {
   return isObjectLike(value) && value.nodeType === 1 && !isPlainObject(value);
@@ -283,6 +259,22 @@ export function isElement(value: any) {
  */
 export function isDate(value: any) {
   return isObjectLike(value) && getType(value) === '[object Date]';
+}
+
+/**
+ * @description.zh_CN 检查 value 是否是一个Set对象。
+ * @param value
+ */
+export function isSet(value: any) {
+  return isObjectLike(value) && getType(value) == '[object Set]';
+}
+
+/**
+ * @description.zh_CN 检查 value 是否是一个Map对象。
+ * @param value
+ */
+export function isMap(value: any) {
+  return isObjectLike(value) && getType(value) == '[object Map]';
 }
 
 /**
@@ -303,38 +295,26 @@ export function isRegExp(value: any) {
 }
 
 /**
- * @description.zh_CN 类型断言会调用所有的类型检查，返回一个类型数组,尽量不要使用断言，
- * 因为它需要将所有条件检查一遍 :) ,如果你需要全检查一遍的话可以调用
+ * @description.zh_CN 检查value是否为空。
  * @param value
  */
-export function assert(value: any): TYPE[] {
-  const typeAssertArray: TYPE[] = [];
-
-  // 最后如果断言数组长度为0则返回unknown,断言条件下基本不可能出现
-  if (typeAssertArray.length === 0) {
-    typeAssertArray.push('unknown');
+export function isEmpty(value: any) {
+  if (value == null) {
+    return true;
   }
-  return typeAssertArray;
-}
-
-class CheckType {
-  constructor() {
-    // 如果没有入参则这说明这个需要返回实例，如果有入参则需要返回类型
-    if (arguments?.length <= 0 && !(this instanceof CheckType)) {
-      return new CheckType();
+  if (isArrayLike(value) && (isArray(value) || isString(value))) {
+    return value?.length > 0;
+  }
+  if (isMap(value) || isSet(value)) {
+    return value?.size > 0;
+  }
+  if (isObjectLike(value)) {
+    return Object?.keys(value)?.length > 0;
+  }
+  for (const key in value) {
+    if (Object.prototype.hasOwnProperty.call(value, key)) {
+      return false;
     }
-    return assert(arguments[0]);
   }
+  return true;
 }
-
-CheckType.prototype = {
-  isNumber,
-  isNil,
-  isNull,
-  isObject,
-  isFunction,
-  getType,
-  isArray,
-  isString,
-};
-export default CheckType;

@@ -20,4 +20,7 @@ export default defineConfig({
   ],
   logo: '/icon.svg',
   favicon: '/icon.svg',
+  sitemap: {
+    hostname: 'https://season.js.org',
+  },
 });

@@ -48,6 +48,20 @@ export interface UploadOption {
   onError?: (error: Error, context: UploadEventContext) => void; // 错误回调
 }
 
+/**
+ * @description.zh_CN 上传
+ * @param url 地址
+ * @param file 文件对象
+ * @param filename 文件名
+ * @param data  数据
+ * @param headers headers
+ * @param method  方法
+ * @param withCredentials 是否携带cookies
+ * @param onProgress 进度回调
+ * @param onSuccess 成功回调
+ * @param onError 失败回调
+ * @TODO：调研 fetch 还有 分片上传
+ */
 export function upload({
   url,
   file,
