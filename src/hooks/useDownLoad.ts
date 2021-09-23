@@ -1,4 +1,5 @@
 import { useRequest } from 'ahooks';
+import { saveAs } from 'file-saver';
 
 /**
  * @description 文件流下载
@@ -42,10 +43,12 @@ export const useDownLoad = (
       const blob = new Blob([response?.data ?? '内容为空！'], {
         type: 'charset=utf-8',
       });
-      const link = document.createElement('a');
-      link.download = headerFileName ?? fileName ?? defaultFileName;
-      link.href = URL.createObjectURL(blob);
-      link.click();
+      // const link = document.createElement('a');
+      // link.download = headerFileName ?? fileName ?? defaultFileName;
+      // link.href = URL.createObjectURL(blob);
+      // link.click();
+      //使用file-saver解决兼容问题
+      saveAs(blob, headerFileName ?? fileName ?? defaultFileName);
     },
   },
 ) => {
