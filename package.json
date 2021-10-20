@@ -3,6 +3,7 @@
   "version": "0.0.9",
   "repository": "https://github.com/seasonjs/tools.git",
   "author": "Cyberhan123",
+  "description": "react & js next generation toolset package",
   "license": "MIT",
   "scripts": {
     "start": "dumi dev",
