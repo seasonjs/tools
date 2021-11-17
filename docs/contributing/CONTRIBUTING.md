@@ -40,31 +40,31 @@ We're always looking for more opinions on discussions in the issue tracker. It's
 - update npm packages
 
 ```bash
-yarn upgrade-interactive --latest
+$ pnpm up
 ```
 
 - install all
 
 ```bash
-$ yarn i
+$ pnpm i
 ```
 
 - start
 
 ```bash
-$ yarn start
+$ pnpm run start
 ```
 
 - build doc
 
 ```bash
-$ yarn run docs:build
+$ pnpm run docs:build
 ```
 
 - build packages
 
 ```bash
-$ yarn run build
+$ pnpm run build
 ```
 
 - git setting

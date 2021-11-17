@@ -31,36 +31,36 @@
 - 为拉取请求和提交的内容使用一个清晰的、描述性的标题。
 - 你可能会被要求对你的拉动请求进行修改。没有必要再开一个拉动请求。只需更新现有的那个。
 
-### 开发提示 & 贡献指南
+### 开发提示
 
 - 升级包
 
 ```bash
-yarn upgrade-interactive --latest
+$ pnpm up
 ```
 
 - 安装依赖
 
 ```bash
-$ yarn i
+$ pnpm i
 ```
 
 - 启动开发服务
 
 ```bash
-$ yarn start
+$ pnpm run start
 ```
 
 - 构建文档
 
 ```bash
-$ yarn run docs:build
+$ pnpm run docs:build
 ```
 
 - 构建包
 
 ```bash
-$ yarn run build
+$ pnpm run build
 ```
 
 - git 设置

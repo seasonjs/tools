@@ -38,9 +38,9 @@ https://season.js.org
 
 所有现代浏览器， Chrome, Firefox, Edge, Safari。
 
-## 贡献代码
+## 参与贡献
 
-[贡献指南](./docs/contributing/CONTRIBUTING-zh_CN.md)
+查看 [贡献指南](./docs/contributing/CONTRIBUTING-zh_CN.md)
 
 ## 贡献者
 

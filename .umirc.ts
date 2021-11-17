@@ -6,10 +6,8 @@ export default defineConfig({
   publicPath: __DEV__ ? '/' : '//season.js.org/',
   exportStatic: {}, // 将所有路由输出为 HTML 目录结构，以免刷新页面时 404
   analytics: {
-    // Google Analytics 代码，配置后会启用
     ga: 'G-DS0MXDKW8N',
   },
-  // ssr: {},
   locales: [['zh-CN', '中文']],
   title: 'seasonjs/tools',
   mode: 'site',

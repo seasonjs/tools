@@ -40,7 +40,7 @@ Support all modern browsers eg. Chrome, Firefox, Edge, Safari.
 
 ## Contributing
 
-[Contributing Guide](./docs/contributing/CONTRIBUTING.md)
+see [Contributing Guide](./docs/contributing/CONTRIBUTING.md)
 
 ## Contributors
 
