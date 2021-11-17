@@ -8,7 +8,7 @@ export default defineConfig({
   analytics: {
     ga: 'G-DS0MXDKW8N',
   },
-  mfsu: __DEV__ ? {development:{output:'src/.mfsu'}} : undefined,
+  webpack5:{},
   locales: [['zh-CN', '中文']],
   title: 'seasonjs/tools',
   mode: 'site',
