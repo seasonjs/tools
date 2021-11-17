@@ -7,7 +7,6 @@ const seasonToolsVersion = 'v1.0.0';
 console.info(`%c season tools %c ${seasonToolsVersion}`, a, b);
 
 export * from 'ahooks';
-export * as querystring from 'querystring';
 export * from './mixin';
 export * from './ua';
 export * from './reg';
