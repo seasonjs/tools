@@ -38,93 +38,9 @@ https://season.js.org
 
 所有现代浏览器， Chrome, Firefox, Edge, Safari。
 
-## 开发
+## 贡献代码
 
-#### 项目结构
-
-```
-root
-│
-└───docks     dumi 文档
-│
-└───src       code space
-    │
-    └───array
-    │
-    └───asyncQyeue
-    │
-    └───day
-    │
-    └───deepClone  未被导出给用户，仅做记录
-    │
-    └───dom
-    │
-    └───hoc        react hoc
-    │
-    └───hooks      react hooks
-    │
-    └───list
-    │
-    └───mixin      未被导出给用户，仅做记录
-    │
-    └───mobx
-    │
-    └───reg
-    │
-    └───store
-    │
-    └───thread
-    │
-    └───tree
-    │
-    └───typeCheck  未被导出给用户，仅做记录
-    │
-    └───ua
-    │
-    └───upload     未被导出给用户，仅做记录
-│
-└───index.ts  Entry file
-```
-
-### 开发提示 & 贡献指南
-
-- 升级包
-
-```bash
-yarn upgrade-interactive --latest
-```
-
-- 安装依赖
-
-```bash
-$ yarn i
-```
-
-- 启动开发服务
-
-```bash
-$ yarn start
-```
-
-- 构建文档
-
-```bash
-$ yarn run docs:build
-```
-
-- 构建包
-
-```bash
-$ yarn run build
-```
-
-- git 设置
-
-You must be case sensitive because JS import is case sensitive
-
-```
-git config core.ignorecase false
-```
+[贡献指南](./docs/contributing/CONTRIBUTING-zh_CN.md)
 
 ## 贡献者
 

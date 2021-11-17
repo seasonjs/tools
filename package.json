@@ -1,6 +1,6 @@
 {
   "name": "@seasonjs/tools",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "repository": "https://github.com/seasonjs/tools.git",
   "author": "Cyberhan123",
   "description": "react & js next generation toolset package",

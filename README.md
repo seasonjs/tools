@@ -1,6 +1,6 @@
 English | [简体中文](./README.zh-CN.md)
 
-<img src="./docs/public/icon.svg" width="150" alt=''>
+<img src="/docs/public/logo.png" width="150" alt=''>
 
 # @seasonjs/tools
 
@@ -30,7 +30,7 @@ npm install @seasonjs/tools
 yarn add @seasonjs/tools
 ```
 
-## Usage
+## Document
 
 https://season.js.org
 
@@ -38,93 +38,9 @@ https://season.js.org
 
 Support all modern browsers eg. Chrome, Firefox, Edge, Safari.
 
-## Development
+## Contributing
 
-#### Frontend File Structure
-
-```
-root
-│
-└───docks     dumi doc
-│
-└───src       code space
-    │
-    └───array
-    │
-    └───asyncQyeue
-    │
-    └───day
-    │
-    └───deepClone  not export to user yet,just an record.
-    │
-    └───dom
-    │
-    └───hoc        react hoc
-    │
-    └───hooks      react hooks
-    │
-    └───list
-    │
-    └───mixin      not export to user yet,just an record.
-    │
-    └───mobx
-    │
-    └───reg
-    │
-    └───store
-    │
-    └───thread
-    │
-    └───tree
-    │
-    └───typeCheck  not export to user yet,just an record.
-    │
-    └───ua
-    │
-    └───upload not export to user yet,just an record.
-│
-└───index.ts  Entry file
-```
-
-### Develop tips & Contribute guide
-
-- update npm packages
-
-```bash
-yarn upgrade-interactive --latest
-```
-
-- install all
-
-```bash
-$ yarn i
-```
-
-- start
-
-```bash
-$ yarn start
-```
-
-- build doc
-
-```bash
-$ yarn run docs:build
-```
-
-- build packages
-
-```bash
-$ yarn run build
-```
-
-- git setting
-
-You must be `case-sensitive` because JS import is `case-sensitive`
-
-```
-git config core.ignorecase false
-```
+[Contributing Guide](./docs/contributing/CONTRIBUTING.md)
 
 ## Contributors
 
