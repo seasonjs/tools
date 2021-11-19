@@ -26,7 +26,6 @@ specifiers:
   mobx-react-lite: ^3.2.2
   nanoid: ^3.1.30
   prettier: ^2.4.1
-  querystring: ^0.2.1
   react: ^17.0.2
   react-dom: ^17.0.2
   react-hook-form: ^7.19.5
@@ -45,10 +44,6 @@ dependencies:
   hoist-non-react-statics: 3.3.2
   localforage: 1.10.0
   nanoid: 3.1.30
-  querystring: 0.2.1
-  react: 17.0.2
-  react-dom: 17.0.2_react@17.0.2
-  react-hook-form: 7.19.5_react@17.0.2
   reflect-metadata: 0.1.13
   resize-observer-polyfill: 1.5.1
   xlsx: 0.17.4
@@ -71,6 +66,9 @@ devDependencies:
   mobx: 6.3.7
   mobx-react-lite: 3.2.2_17a9a2b9737f188c3f2d8ece9728da86
   prettier: 2.4.1
+  react: 17.0.2
+  react-dom: 17.0.2_react@17.0.2
+  react-hook-form: 7.19.5_react@17.0.2
   typescript: 4.4.4
   yorkie: 2.0.0
 
@@ -9793,6 +9791,7 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
+    dev: true
 
   /lowercase-keys/1.0.1:
     resolution: {integrity: sha512-G2Lj61tXDnVFFOi8VZds+SoQjtQC3dgokKdDG2mTm1tx4m50NUHBOZSBwQQHyy0V12A0JTG4icfZQH+xPyh8VA==}
@@ -10577,6 +10576,7 @@ packages:
   /object-assign/4.1.1:
     resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=}
     engines: {node: '>=0.10.0'}
+    dev: true
 
   /object-copy/0.1.0:
     resolution: {integrity: sha1-fn2Fi3gb18mRpBupde04EnVOmYw=}
@@ -12040,11 +12040,6 @@ packages:
     engines: {node: '>=0.4.x'}
     dev: true
 
-  /querystring/0.2.1:
-    resolution: {integrity: sha512-wkvS7mL/JMugcup3/rMitHmd9ecIGd2lhFhK9N3UUQ450h66d1r3Y9nvXzQAW1Lq+wyx61k/1pfKS5KuKiyEbg==}
-    engines: {node: '>=0.4.x'}
-    dev: false
-
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
@@ -12273,7 +12268,7 @@ packages:
       object-assign: 4.1.1
       react: 17.0.2
       scheduler: 0.20.2
-    dev: false
+    dev: true
 
   /react-hook-form/7.19.5_react@17.0.2:
     resolution: {integrity: sha512-+M9gd0nWWASuEitf5PQGOGNElnHknzY3rGISrPDXwsOmZb7c/jyvkRUqk4OJXaZit1ZwesSv+EysttdAeFEfmw==}
@@ -12281,7 +12276,7 @@ packages:
       react: ^16.8.0 || ^17
     dependencies:
       react: 17.0.2
-    dev: false
+    dev: true
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -12417,7 +12412,7 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-    dev: false
+    dev: true
 
   /read-pkg-up/4.0.0:
     resolution: {integrity: sha512-6etQSH7nJGsK0RbG/2TeDzZFa8shjQ1um+SwQQ5cwKy0dhSXdOncEhb1CPpvQG4h7FyOV6EB6YlV0yJvZQNAkA==}
@@ -13069,7 +13064,7 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-    dev: false
+    dev: true
 
   /schema-utils/1.0.0:
     resolution: {integrity: sha512-i27Mic4KovM/lnGsy8whRCHhc7VicJajAjTrYg11K9zfZXnYIt4k5F+kZkwjnrhKzLic/HLU4j11mjsz2G/75g==}

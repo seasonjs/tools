@@ -1,6 +1,6 @@
 [English](./README.md) | 简体中文
 
-<img src="https://github.com//seasonjs/tools/blob/main/public/logo.png?raw=true" alt="logo.png" width="150">
+<img src="https://github.com//seasonjs/tools/blob/main/public/icon.svg?raw=true" alt="logo.png" width="150">
 
 # @seasonjs/tools
 
