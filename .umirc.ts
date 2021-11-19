@@ -8,6 +8,7 @@ export default defineConfig({
   analytics: {
     ga: 'G-DS0MXDKW8N',
   },
+  webpack5:{},
   locales: [['zh-CN', '中文']],
   title: 'seasonjs/tools',
   mode: 'site',
