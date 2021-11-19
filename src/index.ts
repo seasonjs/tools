@@ -6,8 +6,6 @@ const seasonToolsVersion = 'v1.0.0';
 // eslint-disable-next-line
 console.info(`%c season tools %c ${seasonToolsVersion}`, a, b);
 
-// export * from 'ahooks';
-// export * from './mixin';
 export * from './ua';
 export * from './reg';
 export * from './checkType';
