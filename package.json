@@ -40,7 +40,6 @@
     "npm": "<7"
   },
   "dependencies": {
-    "@hookform/devtools": "^4.0.1",
     "bowser": "^2.11.0",
     "default-passive-events": "^2.0.0",
     "file-saver": "^2.0.5",
@@ -49,7 +48,7 @@
     "nanoid": "^3.1.30",
     "reflect-metadata": "^0.1.13",
     "resize-observer-polyfill": "^1.5.1",
-    "ahooks": "^2.10.12",
+    "@ahooksjs/use-request": "^2.8.13",
     "xlsx": "^0.17.4"
   },
   "peerDependencies": {
@@ -57,12 +56,10 @@
     "mobx-react-lite": "^3.2.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-hook-form": "^7.4.2"
   },
   "devDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-hook-form": "^7.19.5",
     "@types/file-saver": "^2.0.4",
     "@types/hoist-non-react-statics": "^3.3.1",
     "@types/jest": "^27.0.2",

@@ -1,4 +1,4 @@
-export class AsyncArray {
+export class AsyncQueue {
   private funcQueue = [];
   private isExec = false;
   // @ts-ignore

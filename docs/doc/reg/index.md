@@ -9,12 +9,12 @@ title: Reg
 只提供正则表达式语句，不会调用语句
 
 ```tsx | pure
-import { Reg } from '@seasonjs/tools';
+import { ipReg, qqReg, emailReg, phoneNumberReg } from '@seasonjs/tools';
 
 export default () => {
-  console.log(Reg.ip);
-  console.log(Reg.qq);
-  console.log(Reg.email);
-  console.log(Reg.phoneNumber);
+  console.log(ipReg);
+  console.log(qqReg);
+  console.log(emailReg);
+  console.log(phoneNumberReg);
 };
 ```

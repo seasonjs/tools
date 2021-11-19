@@ -4,6 +4,8 @@ title: useDownLoad
 
 ## 常用下载方法
 
+> 基于useRequest实现
+
 ### 快速上手
 
 ```tsx | pure

@@ -1,3 +1,11 @@
+/**
+ * @description.zh_CN 整体代码和实现借鉴了Lodash的代码,类型的检查与定义根据ecma规范进行（MDN）,扩充类型参考了ts类型
+ * @Notice 基本类型的检查会包含两个部分，一个是检查对象原始类型，一个是检查对象包装器类型(Object(1),Object(1n),Object(true))，如果有需求可以分别调用
+ * @link1 https://262.ecma-international.org/6.0/#sec-ecmascript-language-types
+ * @link2 https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
+ * @link3 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
+ */
+
 export * from './getType';
 
 export * from './isNumberPrimitive';

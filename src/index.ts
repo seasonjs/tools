@@ -18,3 +18,4 @@ export * from './dom/defaultPassiveEvents';
 export * from './hooks';
 export * from './mobx';
 export * from './download';
+export * from '@ahooksjs/use-request';

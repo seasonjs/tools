@@ -1,5 +1,7 @@
-import { isArray, isObjectLike } from '@/checkType/assertFunc';
+
 import { getType } from './getType';
+import { isArray } from './isArray';
+import { isObjectLike } from './isObjectLike';
 
 /**
  * @description.zh_CN 检查 value 是否是String对象。

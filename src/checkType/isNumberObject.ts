@@ -1,4 +1,5 @@
-import { getType, isObjectLike } from '@/checkType/assertFunc';
+import { getType } from "./getType";
+import { isObjectLike } from "./isObjectLike";
 
 /**
  * @description.zh_CN 检查 value 是否是 Number对象。

@@ -6,7 +6,7 @@ title: useForceUpdate
 
 ### 快速上手
 
-```tsx | pure
+```tsx
 import React from 'react';
 import { useForceUpdate } from '@seasonjs/tools';
 

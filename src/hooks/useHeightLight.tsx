@@ -60,19 +60,4 @@ export const useHeightLight = (
   );
   return data;
 };
-// function travleTree(tree: any, keyword?: string) {
-//   tree.forEach((item: Record<string, any>, index: any) => {
-//     // 如果有要搜索的关键字
-//     if (keyword) {
-//       const splitWord = keySingleRender(item.content, keyword);
-//       item.content = (
-//         <>
-//           {splitWord}
-//         </>
-//       );
-//     }
-//
-//
-//   });
-//   return tree;
-// }
+

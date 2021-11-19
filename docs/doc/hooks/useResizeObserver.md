@@ -6,7 +6,7 @@ title: useResizeObserver
 
 ### 快速上手
 
-```tsx | pure
+```tsx
 import React, { useRef } from 'react';
 import { useResizeObserver } from '@seasonjs/tools';
 

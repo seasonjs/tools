@@ -1,3 +1,5 @@
+export * from './asyncQueue';
+
 /**
  * @description.zh-CN 找出两个数组不相同的元素的索引
  * @param arr1

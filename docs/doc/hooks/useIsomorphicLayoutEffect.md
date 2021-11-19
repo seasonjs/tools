@@ -1,4 +1,6 @@
-## useIsomorphicLayoutEffect
+---
+title: useIsomorphicLayoutEffect
+---
 
 ### 快速上手
 
