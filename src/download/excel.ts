@@ -8,6 +8,7 @@ import type {
   WSKeys,
 } from 'xlsx';
 import XLSX from 'xlsx';
+import { isArray, isBoolean, isDate, isNil, isNumber } from '@/checkType';
 
 /**
  * 格式化数据 主要是处理转换过程的类型，目前只会导出一张表
@@ -45,19 +46,18 @@ function arrayToSheet(
         v: data[R][C],
       };
       // 如果为 nil 则不需要处理
-      if (cell.v == null) continue;
+      if (isNil(cell.v)) continue;
       // 获取表格encode地址
       const ca = XLSX.utils.encode_cell({
         c: C,
         r: R,
       });
 
-      if (typeof cell.v === 'number') cell.t = 'n';
-      else if (typeof cell.v === 'boolean') cell.t = 'b';
-      else if (cell.v instanceof Date) {
+      if (isNumber(cell.v)) cell.t = 'n';
+      else if (isBoolean(cell.v)) cell.t = 'b';
+      else if (isDate(cell.v)) {
         cell.t = 'n';
-        // cell.z = XLSX.SSF._Table[14];
-        // cell.v = cell.v;
+        cell.z = XLSX.SSF.get_table()[14];
       } else cell.t = 's';
       ws[ca] = cell;
     }
@@ -66,7 +66,7 @@ function arrayToSheet(
   return ws;
 }
 
-function s2ab(str: string) {
+function stringToArrayBuffer(str: string) {
   const buf = new ArrayBuffer(str.length);
   const view = new Uint8Array(buf);
   for (let i = 0; i !== str.length; ++i) view[i] = str.charCodeAt(i) & 0xff;
@@ -100,20 +100,20 @@ function formatSheet(
             };
           } | null,
         ) => {
-          /* 先判断是否为null/undefined */
-          if (val == null) {
+          //先判断是否为nil
+          if (isNil(val)) {
             return {
               wch: 10,
             };
           }
-          if (val.toString().charCodeAt(0) > 255) {
-            /* 再判断是否为中文 */
+          if (val?.toString()?.charCodeAt(0) ?? 0 > 255) {
+            //再判断是否为中文
             return {
-              wch: val.toString().length * 2,
+              wch: (val?.toString()?.length ?? 0) * 2,
             };
           }
           return {
-            wch: val.toString().length,
+            wch: val?.toString()?.length ?? 0,
           };
         },
       ),
@@ -162,8 +162,8 @@ export function downLoadExcel(param: exportExcelProps) {
   };
 
   const item = data[0];
-  if (item instanceof Array) {
-    if (header && header.length) {
+  if (isArray(item)) {
+    if (header?.length) {
       data.unshift(header);
     }
     const ws_name = 'Sheet1';
@@ -174,7 +174,7 @@ export function downLoadExcel(param: exportExcelProps) {
   } else {
     for (let i = 0; i < data.length; i++) {
       const { sheetName, sheetData } = data[i];
-      if (header && header.length) {
+      if (header?.length) {
         sheetData.unshift(header);
       }
       const sName = `${i + 1}.${sheetName}`;
@@ -183,7 +183,6 @@ export function downLoadExcel(param: exportExcelProps) {
       wb.SheetNames.push(sName);
       wb.Sheets[sName] = ws;
     }
-    console.log(wb.SheetNames);
   }
 
   const wbout = XLSX.write(wb, {
@@ -192,7 +191,7 @@ export function downLoadExcel(param: exportExcelProps) {
     type: 'binary',
   });
   saveAs(
-    new Blob([s2ab(wbout)], {
+    new Blob([stringToArrayBuffer(wbout)], {
       type: 'application/octet-stream',
     }),
     `${filename ?? 'excel-list'}.${bookType ?? 'xlsx'}`,
