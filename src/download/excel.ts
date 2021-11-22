@@ -62,7 +62,7 @@ function arrayToSheet(
       ws[ca] = cell;
     }
   }
-  if (range.s.c < 10000000) ws['!ref'] = XLSX.utils.encode_range(range);
+  if (range.s.c < 10_000_000) ws['!ref'] = XLSX.utils.encode_range(range);
   return ws;
 }
 
@@ -89,34 +89,23 @@ function formatSheet(
   if (autoWidth) {
     /* 设置worksheet每列的最大宽度 */
     const colWidth = data.map((row) =>
-      row.map(
-        (
-          val: {
-            toString: () => {
-              (): any;
-              new (): any;
-              charCodeAt: { (arg0: number): number; new (): any };
-              length: number;
-            };
-          } | null,
-        ) => {
-          //先判断是否为nil
-          if (isNil(val)) {
-            return {
-              wch: 10,
-            };
-          }
-          if (val?.toString()?.charCodeAt(0) ?? 0 > 255) {
-            //再判断是否为中文
-            return {
-              wch: (val?.toString()?.length ?? 0) * 2,
-            };
-          }
+      row.map((val: any) => {
+        //先判断是否为nil
+        if (isNil(val)) {
           return {
-            wch: val?.toString()?.length ?? 0,
+            wch: 10,
           };
-        },
-      ),
+        }
+        if (val?.toString()?.charCodeAt(0) ?? 0 > 255) {
+          //再判断是否为中文
+          return {
+            wch: (val?.toString()?.length ?? 0) * 2,
+          };
+        }
+        return {
+          wch: val?.toString()?.length ?? 0,
+        };
+      }),
     );
     /* 以第一行为初始值 */
     const result = colWidth[0];
