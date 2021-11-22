@@ -3,3 +3,7 @@ export * from './emojiReg';
 export * from './ipReg';
 export * from './qqReg';
 export * from './phoneNumberReg';
+export * from './idCardReg';
+export * from './colorReg';
+export * from './md5Reg';
+export * from './timeReg';
