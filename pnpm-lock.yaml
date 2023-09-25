@@ -7311,7 +7311,7 @@ packages:
   /generic-names@2.0.1:
     resolution: {integrity: sha512-kPCHWa1m9wGG/OwQpeweTwM/PYiQLrUIxXbt/P4Nic3LbGjCP0YwrALHW1uNLKZ0LIMg+RF+XRlj2ekT9ZlZAQ==}
     dependencies:
-      loader-utils: 1.4.0
+      loader-utils: 1.4.2
     dev: true
 
   /gensync@1.0.0-beta.2:
@@ -9656,6 +9656,7 @@ packages:
 
   /loader-utils@1.4.0:
     resolution: {integrity: sha512-qH0WSMBtn/oHuwjy/NucEgbx5dbxxnxup9s4PVXJUDHZBQY+s0NWA9rJf53RBnQZxfch7euUui7hpoAPvALZdA==}
+
     engines: {node: '>=4.0.0'}
     dependencies:
       big.js: 5.2.2
@@ -11340,7 +11341,7 @@ packages:
     resolution: {integrity: sha512-cLWoDEY5OwHcAjDnkyRQzAXfs2jrKjXpO/HQFcc5b5u/r7aa471wdmChmwfnv7x2u840iat/wi0lQ5nbRgSkUA==}
     engines: {node: '>= 6'}
     dependencies:
-      loader-utils: 1.4.0
+      loader-utils: 1.4.2
       postcss: 7.0.32
       postcss-load-config: 2.1.2
       schema-utils: 1.0.0
@@ -15001,7 +15002,7 @@ packages:
     resolution: {integrity: sha512-/p9K7bEh0Dj6WbXg4JG0xvLQmIadrner1bi45VMJTfnbVHsc7yIajZyoSoK60/dtVBs12Fm6WkUI5/3WAVsNMw==}
     engines: {node: '>=0.8'}
     dev: false
-
+    
   /word-wrap@1.2.4:
     resolution: {integrity: sha512-2V81OA4ugVo5pRo46hAoD2ivUJx8jXmWXfUkY4KFNw0hEptvN0QfH3K4nHiwzGeKl5rFKedV48QVoqYavy4YpA==}
     engines: {node: '>=0.10.0'}
